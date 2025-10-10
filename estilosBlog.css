@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.textoBlog{
+    font-family: serif;
+    font-size: 80px;
+    color: #fff;
+    margin-left: 100px;
+}
+
+body{
+    font-family: "Jost", serif;
+    min-height: 100vh;
+    opacity: 80.5;
+        
+    word-wrap: break-word; /* Permite cortar palabras largas */
+    overflow-wrap: break-word; /* Alternativa moderna */
+    white-space: norma
+}
+
+.contenedor-imagen {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background: url(Imagenes/fondo.png) no-repeat center center/cover;
+    position: relative;
+    align-items: center;
+}
+
+.contenedor-fondoColor {
+    width: 100%;
+    min-height: 100vh;
+    background: #502314;
+    background: linear-gradient(180deg,rgba(80, 35, 20, 1) 10%, rgba(125, 55, 31, 1) 32%, rgba(209, 77, 33, 1) 71%, rgba(247, 151, 7, 1) 100%);
+}
+
+.contenedor-colorContinuo {
+    width: 100%;
+    min-height: 100vh;
+    background: #502314;
+    background: linear-gradient(0deg,rgba(80, 35, 20, 1) 10%, rgba(125, 55, 31, 1) 32%, rgba(209, 77, 33, 1) 71%, rgba(247, 151, 7, 1) 100%);
+}
+
+.contenedor-Base{
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+    width: 100%;
+    color: #fff;
+    margin-left: 100px;
+}
+
+.contenedor-central {
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+    width: 900px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    color: #fff;
+}
+
+.contenedor-Columna{
+    height: 500px;
+    max-width: 700px;
+    color: #fff;
+    padding-top: 20px;
+    padding-left: 40px;
+}
+
+.contenedor-Linea{
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+    max-width: 700px;
+    color: #fff;
+    padding-top: 20px;
+    padding-left: 40px;
+    gap: 80px;
+}
+
+
+.tags span {
+    background: #f3d6d6;
+    padding: 6px 12px;
+    border-radius: 8px;
+    margin-right: 10px;
+    font-size: 14px;
+    display: inline-block;
+    color: #000;
+}
+
+.tags span:hover{
+    background: rgba(255, 165, 20, 0.8);
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background: transparent;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+}
+
+.navbar-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 2rem;
+    max-width: 1600px;
+}
+
+.navbar-logo{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navbar-container .navbar-menu{
+    display: flex;
+    text-align: center;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.navbar-container .navbar-menu li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 3px 20px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    transition: all 0.7s ease;
+    white-space: nowrap;
+}
+
+.navbar-container .navbar-menu li a:hover,
+.navbar-container .navbar-menu li a.active{
+    color: #162530;
+    background: rgba(255, 165, 20, 0.8);
+    border: 2px solid #fff;
+}
+
+.navbar-toggle{
+    display: none;
+    background: transparent;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+/*Tablets o celulares grandes*/
+@media (max-width: 880px){
+    .navbar{
+        backdrop-filter: none;
+    }
+
+    .navbar-container .navbar-menu{
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.7rem !important;
+        position: absolute;
+        height: 100vh;
+        width: 250px;
+        top: 0;
+        right: 0;
+        padding: 5rem 1.5rem;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+    }
+
+    .navbar-container .navbar-menu.active{
+        display: flex;
+    }
+
+    .navbar-toggle{
+        display: block;
+        z-index: 999;
+    }
+
+    .navbar-toggle.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .navbar-toggle.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .navbar-toggle.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .contenedor-central {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+        width: 500px; /* Para que no se haga gigante */
+        text-align: center;
+        color: #fff;
+    }
+}
+
+/*Celulares*/
+@media (max-width:480px){
+    .navbar-container{
+        padding: 0 1rem;
+    }
+
+    .navbar-logo{
+        font-size: 1.7rem;
+    }
+
+    .navbar-container .navbar-menu li a{
+        font-size: 1.2rem;
+        padding: 3px 15px;
+    }
+}
