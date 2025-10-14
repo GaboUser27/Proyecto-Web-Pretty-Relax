@@ -201,7 +201,7 @@ html, body {
     }
 
     .contenedor-central {
-        width: 80%; /* Ajusta al viewport */
+        width: 90%; /* Ajusta al viewport */
         max-width: 480px; /* Limita en móviles */
     }
 
