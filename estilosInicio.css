@@ -33,13 +33,9 @@ body{
     min-height: 100vh;
     background: #502314;
     background: linear-gradient(180deg,rgba(80, 35, 20, 1) 10%, rgba(125, 55, 31, 1) 32%, rgba(209, 77, 33, 1) 71%, rgba(247, 151, 7, 1) 100%);
-}
-
-.contenedor-NoimagenC {
-    width: 100%;
-    min-height: 100vh;
-    background: #502314;
-    background: linear-gradient(0deg,rgba(80, 35, 20, 1) 10%, rgba(125, 55, 31, 1) 32%, rgba(209, 77, 33, 1) 71%, rgba(247, 151, 7, 1) 100%);
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
 }
 
 .contenedor-central {

@@ -11,7 +11,7 @@
     font-family: serif;
     font-size: 80px;
     color: #fff;
-    margin-left: 100px;
+    margin-left: 120px;
 }
 
 body{
@@ -39,66 +39,107 @@ body{
     min-height: 100vh;
     background: #502314;
     background: linear-gradient(180deg,rgba(80, 35, 20, 1) 10%, rgba(125, 55, 31, 1) 32%, rgba(209, 77, 33, 1) 71%, rgba(247, 151, 7, 1) 100%);
-}
-
-.contenedor-colorContinuo {
-    width: 100%;
-    min-height: 100vh;
-    background: #502314;
-    background: linear-gradient(0deg,rgba(80, 35, 20, 1) 10%, rgba(125, 55, 31, 1) 32%, rgba(209, 77, 33, 1) 71%, rgba(247, 151, 7, 1) 100%);
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
 }
 
 .contenedor-Base{
     display: flex;
     flex-direction: row;
-    height: 500px;
+    height: 1450px;
     width: 100%;
     color: #fff;
-    margin-left: 100px;
 }
 
-.contenedor-central {
+.contenedor-servicios {
     display: flex;
-    flex-direction: row;
-    height: 500px;
-    width: 900px;
+    flex-direction: column;
+    margin-left: 120px;
+    height: 1450px;
+    width: 1340px;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 15px;
     color: #fff;
 }
 
-.contenedor-Columna{
-    height: 500px;
-    max-width: 700px;
-    color: #fff;
-    padding-top: 20px;
-    padding-left: 40px;
+.contenedorServiciosGeneral{
+    position: relative;
+    max-width: 1320px;
+    width: 100%;
+    padding: 40px 40px;
 }
 
-.contenedor-Linea{
+.botonesServicios{
     display: flex;
-    flex-direction: row;
-    height: 500px;
-    max-width: 700px;
-    color: #fff;
-    padding-top: 20px;
-    padding-left: 40px;
-    gap: 80px;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
+button{
+    padding: 10px 20px;
+    font-size: 18px;
+    background: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.5);
+}
 
-.tags span {
-    background: #f3d6d6;
-    padding: 6px 12px;
+button.active{
+    color: #162530;
+    background: rgba(255, 166, 50, 0.8);
+    border: 2px solid #fff;
+}
+
+.imagenesServicios{
+    display: flex;
+    margin-top: 35px;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 1280px;
+}
+
+.imagen{
+    flex-basis: 300px;
+    background-color: #fff;
+    padding: 3px;
     border-radius: 8px;
-    margin-right: 10px;
-    font-size: 14px;
-    display: inline-block;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.5);
+}
+
+.imagen img{
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cuerpoImagen{
+    padding: 15px 20px 20px
+}
+
+.tituloImagen{
+    font-size: 20px;
+    font-weight: 500;
     color: #000;
 }
 
-.tags span:hover{
-    background: rgba(255, 165, 20, 0.8);
+.textoImagen{
+    font-size: 18px;
+    color: #000;
+}
+
+.contenedor-etiquetas {
+    display: flex;
+    flex-direction: row;
+    margin-left: 60px;
+    height: 900px;
+    width: 300px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    color: #fff;
 }
 
 .navbar{

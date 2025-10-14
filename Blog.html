@@ -6,9 +6,9 @@
     <title>Pretty & Relax-Blog</title>
     <link rel="stylesheet" href="estilosBlog.css">
 </head>
-<body>
+<body class="contenedor-fondoColor">
     <!--Encabezado-->
-    <header class="contenedor-fondoColor">
+    <header>
         <nav class="navbar">
             <img src="Imagenes/Logo.png" height="100" width="100">
             <div class="navbar-container">
@@ -28,39 +28,131 @@
             </div>
         </nav>
         <br><br><br>
+        
+    </header>
+    <script src="scriptBlog.js"></script>
+    <!--Main-->
+    <main>
         <p class="textoBlog">Blog</p>
         <br>
         <div class="contenedor-Base">
-            <section class="contenedor-central">
-                <section class="contenedor-Columna">         
-                    <h2>Categorías</h2>
-                    <br>
-                    <div class="tags">
-                        <span>Masajes</span>
-                        <span>Cabello</span>
-                        <span>Manicura y Pedicura</span>
+            <section class="contenedor-servicios">
+                <div class="contenedorServiciosGeneral">
+                    <!--Apartado de botones-->
+                    <div class="botonesServicios">
+                        <button class="active" data-name="todo">Todo</button>
+                        <button data-name="masajes">Masajes</button>
+                        <button data-name="cabello">Cabello</button>
+                        <button data-name="manicura-pedicura">Manicura y Pedicura</button>
                     </div>
-                    <br>
-                    <section class="contenedor-Linea">
-                        <img src="Imagenes/Corte1.jpg" height="300" width="500">
-                        <img src="Imagenes/Corte2.jpg" height="300" width="280">
-                    </section>
-                </section>
+                    <!--Imagenes de servicios-->
+                    <div class="imagenesServicios">
+                        <div class="imagen" data-name="cortes">
+                            <img src="ImagenesServicios/Corte1.jpg" alt="corte">
+                            <div class="cuerpoImagen">
+                                <h6 class="tituloImagen">Un nuevo look a tu cabello</h6>
+                                <p class="textoImagen" style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet pretium justo. Maecenas eget nunc et velit vestibulum finibus a non arcu. </p>
+                            </div>
+                        </div>
+
+                        <div class="imagen" data-name="unnas">
+                            <img src="ImagenesServicios/Unnas1.jpg" alt="unna">
+                            <div class="cuerpoImagen">
+                                <h6 class="tituloImagen">Define tu estilo con rizos</h6>
+                                <p class="textoImagen" style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet pretium justo. Maecenas eget nunc et velit vestibulum finibus a non arcu. </p>
+                            </div>
+                        </div>
+
+                        <div class="imagen" data-name="masajes">
+                            <img src="ImagenesServicios/Masaje1.jpg" alt="masaje">
+                            <div class="cuerpoImagen">
+                                <h6 class="tituloImagen">Define tu estilo con rizos</h6>
+                                <p class="textoImagen" style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet pretium justo. Maecenas eget nunc et velit vestibulum finibus a non arcu. </p>
+                            </div>
+                        </div>
+
+                        <div class="imagen" data-name="unnas">
+                            <img src="ImagenesServicios/Unnas2.jpg" alt="unna">
+                            <div class="cuerpoImagen">
+                                <h6 class="tituloImagen">Luz y color en tu cabello</h6>
+                                <p class="textoImagen" style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet pretium justo. Maecenas eget nunc et velit vestibulum finibus a non arcu. </p>
+                            </div>
+                        </div>
+
+                        <div class="imagen" data-name="unnas">
+                            <img src="ImagenesServicios/Unnas3.jpg" alt="unna">
+                            <div class="cuerpoImagen">
+                                <h6 class="tituloImagen">Peinados para Eventos</h6>
+                                <p class="textoImagen" style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet pretium justo. Maecenas eget nunc et velit vestibulum finibus a non arcu. </p>
+                            </div>
+                        </div>
+
+                        <div class="imagen" data-name="masajes">
+                            <img src="ImagenesServicios/Masaje2.jpg" alt="masaje">
+                            <div class="cuerpoImagen">
+                                <h6 class="tituloImagen">Peinados para eventos</h6>
+                                <p class="textoImagen" style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet pretium justo. Maecenas eget nunc et velit vestibulum finibus a non arcu. </p>
+                            </div>
+                        </div>
+
+                        <div class="imagen" data-name="cortes">
+                            <img src="ImagenesServicios/Corte2.jpg" alt="corte">
+                            <div class="cuerpoImagen">
+                                <h6 class="tituloImagen">Peinados para eventos</h6>
+                                <p class="textoImagen" style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet pretium justo. Maecenas eget nunc et velit vestibulum finibus a non arcu. </p>
+                            </div>
+                        </div>
+
+                        <div class="imagen" data-name="cortes">
+                            <img src="ImagenesServicios/Corte3.jpg" alt="corte">
+                            <div class="cuerpoImagen">
+                                <h6 class="tituloImagen">Peinados para eventos</h6>
+                                <p class="textoImagen" style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet pretium justo. Maecenas eget nunc et velit vestibulum finibus a non arcu. </p>
+                            </div>
+                        </div>
+
+                        <div class="imagen" data-name="masajes">
+                            <img src="ImagenesServicios/Masaje3.jpg" alt="masaje">
+                            <div class="cuerpoImagen">
+                                <h6 class="tituloImagen">Peinados para eventos</h6>
+                                <p class="textoImagen" style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet pretium justo. Maecenas eget nunc et velit vestibulum finibus a non arcu. </p>
+                            </div>
+                        </div>
+
+                        <div class="imagen" data-name="cortes">
+                            <img src="ImagenesServicios/Corte4.jpg" alt="corte">
+                            <div class="cuerpoImagen">
+                                <h6 class="tituloImagen">Peinados para eventos</h6>
+                                <p class="textoImagen" style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet pretium justo. Maecenas eget nunc et velit vestibulum finibus a non arcu. </p>
+                            </div>
+                        </div>
+
+                        <div class="imagen" data-name="unnas">
+                            <img src="ImagenesServicios/Unnas4.jpg" alt="unna">
+                            <div class="cuerpoImagen">
+                                <h6 class="tituloImagen">Peinados para eventos</h6>
+                                <p class="textoImagen" style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet pretium justo. Maecenas eget nunc et velit vestibulum finibus a non arcu. </p>
+                            </div>
+                        </div>
+
+                        <div class="imagen" data-name="masajes">
+                            <img src="ImagenesServicios/Masaje4.jpg" alt="masaje">
+                            <div class="cuerpoImagen">
+                                <h6 class="tituloImagen">Peinados para eventos</h6>
+                                <p class="textoImagen" style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet pretium justo. Maecenas eget nunc et velit vestibulum finibus a non arcu. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
+            <section class="contenedor-etiquetas">
+                
+            </section>
         </div>
         <br>
-    </header>
-    <script src="script.js">
-
-    </script>
-    <!--Main-->
-    <main class="contenedor-colorContinuo">
-
     </main>
-    <div class="contenedor-fondoColor">
 
-    </div>
     <!--Footer-->
     <footer id="footer">
 
