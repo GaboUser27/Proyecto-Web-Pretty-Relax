@@ -193,9 +193,15 @@ body{
     }
 
     .navbar-container {
+        width: 100%;
         max-width: 100%;
         padding: 0 1rem;
         box-sizing: border-box;
+    }
+
+    .contenedor-central {
+        width: 90%; /* Ajusta al viewport */
+        max-width: 480px; /* Limita en móviles */
     }
 
     .navbar-logo{
