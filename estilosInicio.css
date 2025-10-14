@@ -180,11 +180,22 @@ body{
 }
 
 /*Celulares*/
-@media (max-width:480px){
-    .navbar-container{
-        padding: 0 1rem; 
-        max-width: 100%;
+@media (max-width:480px){    
+    html, body {
         width: 100%;
+        overflow-x: hidden;
+    }
+
+    .contenedor-imagen,
+    .contenedor-Noimagen {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .navbar-container {
+        max-width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
     }
 
     .navbar-logo{
