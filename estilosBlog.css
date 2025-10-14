@@ -109,6 +109,10 @@ button.active{
     box-shadow: 0 0 10px rgb(0, 0, 0, 0.5);
 }
 
+.imagen.hide{
+    display: none;
+}
+
 .imagen img{
     width: 100%;
     height: 210px;
@@ -273,8 +277,27 @@ button.active{
 
 /*Celulares*/
 @media (max-width:480px){
-    .navbar-container{
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .contenedor-imagen,
+    .contenedor-Noimagen {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .navbar-container {
+        width: 100%;
+        max-width: 100%;
         padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    .contenedor-central {
+        width: 90%; /* Ajusta al viewport */
+        max-width: 480px; /* Limita en móviles */
     }
 
     .navbar-logo{
