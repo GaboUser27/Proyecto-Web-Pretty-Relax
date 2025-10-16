@@ -1,26 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
-.textoBlog{
+.textoBlog {
     font-family: serif;
     font-size: 80px;
     color: #fff;
     margin-left: 120px;
 }
 
-body{
+body {
     font-family: "Jost", serif;
     min-height: 100vh;
     opacity: 80.5;
-        
-    word-wrap: break-word; /* Permite cortar palabras largas */
-    overflow-wrap: break-word; /* Alternativa moderna */
+
+    word-wrap: break-word;
+    /* Permite cortar palabras largas */
+    overflow-wrap: break-word;
+    /* Alternativa moderna */
     white-space: norma
 }
 
@@ -38,13 +40,23 @@ body{
     width: 100%;
     min-height: 100vh;
     background: #502314;
-    background: linear-gradient(180deg,rgba(80, 35, 20, 1) 10%, rgba(125, 55, 31, 1) 32%, rgba(209, 77, 33, 1) 71%, rgba(247, 151, 7, 1) 100%);
+
+
+background: linear-gradient(to bottom,
+        #1a0a05 0%,    /* Marrón muy oscuro para el header */
+        #3b1408 5%,   /* Marrón cálido profundo */
+        #a63c0c 35%,   /* Naranja rojizo sutil */
+        #d95f1c 50%,   /* Naranja brillante (punto focal) */
+        #8c2f0a 70%,   /* Rojo-marrón cálido */
+        #2a0f0a 800%   /* Marrón oscuro profundo */
+    );
+
     background-size: cover;
     background-position: center top;
     background-attachment: fixed;
 }
 
-.contenedor-Base{
+.contenedor-Base {
     display: flex;
     flex-direction: row;
     height: 1450px;
@@ -63,21 +75,21 @@ body{
     color: #fff;
 }
 
-.contenedorServiciosGeneral{
+.contenedorServiciosGeneral {
     position: relative;
     max-width: 1320px;
     width: 100%;
     padding: 40px 40px;
 }
 
-.botonesServicios{
+.botonesServicios {
     display: flex;
     align-items: center;
     gap: 10px;
     flex-wrap: wrap;
 }
 
-button{
+button {
     padding: 10px 20px;
     font-size: 18px;
     background: #fff;
@@ -85,15 +97,17 @@ button{
     border-radius: 20px;
     cursor: pointer;
     box-shadow: 0 0 10px rgb(0, 0, 0, 0.5);
+    transition: background-color 0.7s ease, color 0.7s ease, border-color 0.7s ease;
+    white-space: nowrap;
 }
 
-button.active{
+button.active, button:hover {
     color: #162530;
     background: rgba(255, 166, 50, 0.8);
     border: 2px solid #fff;
 }
 
-.imagenesServicios{
+.imagenesServicios {
     display: flex;
     margin-top: 35px;
     gap: 20px;
@@ -101,7 +115,7 @@ button.active{
     width: 1280px;
 }
 
-.imagen{
+.imagen {
     flex-basis: 300px;
     background-color: #fff;
     padding: 3px;
@@ -109,28 +123,28 @@ button.active{
     box-shadow: 0 0 10px rgb(0, 0, 0, 0.5);
 }
 
-.imagen.hide{
+.imagen.hide {
     display: none;
 }
 
-.imagen img{
+.imagen img {
     width: 100%;
     height: 210px;
     object-fit: cover;
     border-radius: 8px;
 }
 
-.cuerpoImagen{
+.cuerpoImagen {
     padding: 15px 20px 20px
 }
 
-.tituloImagen{
+.tituloImagen {
     font-size: 20px;
     font-weight: 500;
     color: #000;
 }
 
-.textoImagen{
+.textoImagen {
     font-size: 18px;
     color: #000;
 }
@@ -139,14 +153,52 @@ button.active{
     display: flex;
     flex-direction: row;
     margin-left: 60px;
-    height: 900px;
-    width: 300px;
+    max-height: 900px;
+    max-width: 300px;
+    height: 100%;
+    width: 100%;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 15px;
     color: #fff;
 }
 
-.navbar{
+.contenedorEtiquetasGeneral{
+    display: flex;
+    flex-direction: column;
+    max-height: 900px;
+    max-width: 300px;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    color: #fff;
+}
+
+.tituloEtiquetas{
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    max-height: 100px;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    font-size: 50px;
+    font-family: serif;
+}
+
+.botonesEtiquetas{
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    width: 100%;
+    align-items: center;
+    gap: 15px
+}
+
+.botonesEtiquetas button.hide{
+    display: none;
+}
+
+.navbar {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -160,7 +212,7 @@ button.active{
     z-index: 999;
 }
 
-.navbar-container{
+.navbar-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -169,7 +221,7 @@ button.active{
     max-width: 1600px;
 }
 
-.navbar-logo{
+.navbar-logo {
     font-size: 2rem;
     font-weight: 600;
     color: #fff;
@@ -177,14 +229,14 @@ button.active{
     cursor: pointer;
 }
 
-.navbar-container .navbar-menu{
+.navbar-container .navbar-menu {
     display: flex;
     text-align: center;
     gap: 1.5rem;
     list-style: none;
 }
 
-.navbar-container .navbar-menu li a{
+.navbar-container .navbar-menu li a {
     text-decoration: none;
     color: #fff;
     font-size: 1.3rem;
@@ -197,13 +249,13 @@ button.active{
 }
 
 .navbar-container .navbar-menu li a:hover,
-.navbar-container .navbar-menu li a.active{
+.navbar-container .navbar-menu li a.active {
     color: #162530;
     background: rgba(255, 165, 20, 0.8);
     border: 2px solid #fff;
 }
 
-.navbar-toggle{
+.navbar-toggle {
     display: none;
     background: transparent;
     padding: 10px;
@@ -211,7 +263,7 @@ button.active{
     cursor: pointer;
 }
 
-.bar{
+.bar {
     display: block;
     width: 25px;
     height: 3px;
@@ -221,12 +273,12 @@ button.active{
 }
 
 /*Tablets o celulares grandes*/
-@media (max-width: 880px){
-    .navbar{
+@media (max-width: 880px) {
+    .navbar {
         backdrop-filter: none;
     }
 
-    .navbar-container .navbar-menu{
+    .navbar-container .navbar-menu {
         display: none;
         flex-direction: column;
         align-items: flex-start;
@@ -241,24 +293,24 @@ button.active{
         backdrop-filter: blur(10px);
     }
 
-    .navbar-container .navbar-menu.active{
+    .navbar-container .navbar-menu.active {
         display: flex;
     }
 
-    .navbar-toggle{
+    .navbar-toggle {
         display: block;
         z-index: 999;
     }
 
-    .navbar-toggle.active .bar:nth-child(2){
+    .navbar-toggle.active .bar:nth-child(2) {
         opacity: 0;
     }
 
-    .navbar-toggle.active .bar:nth-child(1){
+    .navbar-toggle.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
 
-    .navbar-toggle.active .bar:nth-child(3){
+    .navbar-toggle.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
 
@@ -269,15 +321,18 @@ button.active{
         height: 300px;
         background: rgba(0, 0, 0, 0.5);
         border-radius: 15px;
-        width: 500px; /* Para que no se haga gigante */
+        width: 500px;
+        /* Para que no se haga gigante */
         text-align: center;
         color: #fff;
     }
 }
 
 /*Celulares*/
-@media (max-width:480px){
-    html, body {
+@media (max-width:480px) {
+
+    html,
+    body {
         width: 100%;
         overflow-x: hidden;
     }
@@ -296,15 +351,17 @@ button.active{
     }
 
     .contenedor-central {
-        width: 90%; /* Ajusta al viewport */
-        max-width: 480px; /* Limita en móviles */
+        width: 90%;
+        /* Ajusta al viewport */
+        max-width: 480px;
+        /* Limita en móviles */
     }
 
-    .navbar-logo{
+    .navbar-logo {
         font-size: 1.7rem;
     }
 
-    .navbar-container .navbar-menu li a{
+    .navbar-container .navbar-menu li a {
         font-size: 1.2rem;
         padding: 3px 15px;
     }
