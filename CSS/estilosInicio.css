@@ -23,7 +23,7 @@ body{
     flex-direction: column;
     width: 100%;
     min-height: 100vh;
-    background: url(Imagenes/fondo.png) no-repeat center center/cover;
+    background: url(../Imagenes/fondo.png) no-repeat center center/cover;
     position: relative;
     align-items: center;
 }

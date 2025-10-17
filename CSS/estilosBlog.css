@@ -31,7 +31,7 @@ body {
     flex-direction: column;
     width: 100%;
     min-height: 100vh;
-    background: url(Imagenes/fondo.png) no-repeat center center/cover;
+    background: url(Imagenes/fondoBlog) no-repeat center center/cover;
     position: relative;
     align-items: center;
 }
@@ -41,8 +41,7 @@ body {
     min-height: 100vh;
     background: #502314;
 
-
-background: linear-gradient(to bottom,
+    background: linear-gradient(to bottom,
         #1a0a05 0%,    /* Marrón muy oscuro para el header */
         #3b1408 5%,   /* Marrón cálido profundo */
         #a63c0c 35%,   /* Naranja rojizo sutil */
@@ -52,7 +51,7 @@ background: linear-gradient(to bottom,
     );
 
     background-size: cover;
-    background-position: center top;
+    background-position: center top;    
     background-attachment: fixed;
 }
 
@@ -93,6 +92,8 @@ button {
     padding: 10px 20px;
     font-size: 18px;
     background: #fff;
+    max-width: 220px;
+    width: 100%;
     border: none;
     border-radius: 20px;
     cursor: pointer;
@@ -117,7 +118,7 @@ button.active, button:hover {
 
 .imagen {
     flex-basis: 300px;
-    background-color: #fff;
+    background: rgba(0, 0, 0, 0.6);
     padding: 3px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgb(0, 0, 0, 0.5);
@@ -141,12 +142,12 @@ button.active, button:hover {
 .tituloImagen {
     font-size: 20px;
     font-weight: 500;
-    color: #000;
+    color: #D2B48C ;
 }
 
 .textoImagen {
     font-size: 18px;
-    color: #000;
+    color: #fff;
 }
 
 .contenedor-etiquetas {
