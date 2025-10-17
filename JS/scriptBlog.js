@@ -14,6 +14,14 @@ navbarToggle.addEventListener('click', () => {
 const imagenesFiltro = e => {
     botonesServiciosC.forEach(btn => btn.classList.remove("active"));
     e.target.classList.add("active");
+    
+    const categoriaActiva = e.target.dataset.name;
+
+    // Si la categoría es "todo", limpiar etiquetas seleccionadas
+    if (categoriaActiva === "todo") {
+        etiquetasSeleccionadas = [];
+        botonesEtiquetas.forEach(button => button.classList.remove("active"));
+    }
 
     //Filtrar imágenes
     imagenesServiciosC.forEach(imagen => {
@@ -39,24 +47,29 @@ let etiquetasSeleccionadas = [];
 
 const filtrarPorEtiquetas = () => {
     const imagenes = document.querySelectorAll(".imagenesServicios .imagen");
+    const categoriaActiva = document.querySelector(".botonesServicios button.active")?.dataset.name;
 
-    // Si no hay etiquetas seleccionadas, mostrar todas
-    if (etiquetasSeleccionadas.length === 0) {
-        imagenes.forEach(imagen => imagen.classList.remove("hide"));
-        return;
-    }
-
-    // Si hay etiquetas seleccionadas, filtrar
     imagenes.forEach(imagen => {
         const titulo = imagen.querySelector(".tituloImagen").textContent.toLowerCase();
         const texto = imagen.querySelector(".textoImagen").textContent.toLowerCase();
+        const categoriaImagen = imagen.dataset.name;
 
-        imagen.classList.add("hide"); // Ocultar por defecto
+        // Ocultar por defecto
+        imagen.classList.add("hide");
 
-        for (let keyword of etiquetasSeleccionadas) {
-            if (titulo.includes(keyword) || texto.includes(keyword)) {
+        // Condición: debe coincidir con la categoría activa (o "todo") y con alguna etiqueta seleccionada
+        if ((!categoriaActiva || categoriaActiva === "todo" || categoriaImagen === categoriaActiva)) {
+            if (etiquetasSeleccionadas.length === 0) {
+                // Si no hay etiquetas, mostrar solo las de la categoría activa
                 imagen.classList.remove("hide");
-                break; // Si coincide con una, no sigue buscando
+            } else {
+                // Si hay etiquetas, mostrar solo si coincide con alguna
+                for (let keyword of etiquetasSeleccionadas) {
+                    if (titulo.includes(keyword) || texto.includes(keyword)) {
+                        imagen.classList.remove("hide");
+                        break;
+                    }
+                }
             }
         }
     });

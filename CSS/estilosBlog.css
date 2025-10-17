@@ -66,7 +66,7 @@ body {
 .contenedor-servicios {
     display: flex;
     flex-direction: column;
-    margin-left: 120px;
+    margin-left: 50px;
     height: 1450px;
     width: 1340px;
     background: rgba(0, 0, 0, 0.5);
@@ -122,6 +122,12 @@ button.active, button:hover {
     padding: 3px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgb(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagen:hover{
+    transform: translateY(-10px); /* Se levanta */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6); /* Más sombra para profundidad */
 }
 
 .imagen.hide {
@@ -153,7 +159,6 @@ button.active, button:hover {
 .contenedor-etiquetas {
     display: flex;
     flex-direction: row;
-    margin-left: 60px;
     max-height: 900px;
     max-width: 300px;
     height: 100%;
@@ -197,6 +202,50 @@ button.active, button:hover {
 
 .botonesEtiquetas button.hide{
     display: none;
+}
+
+.contenedor-etiquetasContactos{
+    display: flex;
+    flex-direction: column;
+    margin-left: 120px;
+    max-width: 300px;
+    width: 100%;
+}
+
+.contenedor-contactos{
+    display: flex;
+    flex-direction: row;
+    max-height: 500px;
+    max-width: 300px;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    color: #fff;
+    margin-top: 50px;
+}
+
+.contenedorContactosGeneral{
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    max-width: 300px;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    color: #fff;
+}
+
+.tituloContactos{
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    max-height: 100px;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    font-size: 50px;
+    font-family: serif;
 }
 
 .navbar {
