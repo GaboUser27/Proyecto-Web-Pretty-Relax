@@ -3,10 +3,19 @@ const navbarMenu = document.querySelector('.navbar-menu');
 const botonesServiciosC = document.querySelectorAll(".botonesServicios button");
 const imagenesServiciosC = document.querySelectorAll(".imagenesServicios .imagen");
 const botonesEtiquetas = document.querySelectorAll(".botonesEtiquetas button");
+const etiquetasToggle = document.querySelector('.etiquetas-toggle');
+const botonesEtiquet = document.querySelector(".botonesEtiquetas");
 
+//Listener para toggle de navbar
 navbarToggle.addEventListener('click', () => {
     navbarToggle.classList.toggle('active');
     navbarMenu.classList.toggle('active');
+});
+
+//Listener para toggle de etiquetas
+etiquetasToggle.addEventListener('click', () => {
+    etiquetasToggle.classList.toggle('active');
+    botonesEtiquet.classList.toggle('active');
 });
 
 //La funcion de selección por categoria de las imagenes

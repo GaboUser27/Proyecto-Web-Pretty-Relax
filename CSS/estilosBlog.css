@@ -345,6 +345,14 @@ button.active, button:hover {
     transition: all 0.3s ease-in-out;
 }
 
+.etiquetas-toggle{
+    display: none;
+    background: transparent;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
 /*Tablets o celulares grandes*/
 @media (max-width: 880px) {
     .navbar {
@@ -366,8 +374,18 @@ button.active, button:hover {
         backdrop-filter: blur(10px);
     }
 
+    .botonesEtiquetas{
+        display: none;
+        flex-direction: row;
+    }
+
     .navbar-container .navbar-menu.active {
         display: flex;
+    }
+
+    .botonesEtiquetas.active{
+        display: flex;
+        flex-direction: row;
     }
 
     .navbar-toggle {
@@ -387,6 +405,23 @@ button.active, button:hover {
         transform: translateY(-8px) rotate(-45deg);
     }
 
+    .etiquetas-toggle {
+        display: block;
+        z-index: 999;
+    }
+
+    .etiquetas-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .etiquetas-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .etiquetas-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
     .contenedor-central {
         display: flex;
         align-items: center;
@@ -398,6 +433,14 @@ button.active, button:hover {
         /* Para que no se haga gigante */
         text-align: center;
         color: #fff;
+    }
+
+    .textoBlog,.contenedor-etiquetasContactos{
+        margin-left: 20px;
+    }
+
+    .contenedor-Base{
+        flex-direction: column;
     }
 }
 
@@ -437,5 +480,21 @@ button.active, button:hover {
     .navbar-container .navbar-menu li a {
         font-size: 1.2rem;
         padding: 3px 15px;
+    }
+
+    .textoBlog,.contenedor-etiquetasContactos{
+        margin-left: 20px;
+    }
+
+    .contenedor-Base{
+        flex-direction: column;
+    }
+
+    .contenedor-etiquetas, .contenedorEtiquetasGeneral, .contenedor-etiquetasContactos, .botonesEtiquetas{
+        max-width: 374px;
+    }
+
+    .botonesEtiquetas.button{
+        
     }
 }
