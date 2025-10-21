@@ -382,9 +382,29 @@ button:hover {
         max-width: 50px;
     }
 
-    .contenedor-contenidoArticulo{
+    .contenedor-contenidoArticulo {
         margin-left: 15px;
         height: 1180px;
         width: 350px;
+    }
+
+    .contenedor-cuerpoArticulo {
+        flex-direction: column;
+    }
+
+    .contenedor-tituloArticulo {
+        padding-left: 10px;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .tituloArticulo {
+        font-size: 20px;
+        margin-left: 55px;
+        text-align: center;
+    }
+
+    .contenedorBotonTitulo {
+        margin-left: 50px;
     }
 }
