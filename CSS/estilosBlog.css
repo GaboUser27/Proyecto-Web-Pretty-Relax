@@ -14,6 +14,17 @@
     margin-left: 120px;
 }
 
+.descripcionBlog {
+    margin-left: 155px;
+    color: white;
+    text-align: justify;
+}
+
+.contenedorDescripcion {
+    height: auto;
+    width: auto;
+}
+
 body {
     font-family: "Jost", serif;
     min-height: 100vh;
@@ -27,13 +38,10 @@ body {
 }
 
 .contenedor-imagen {
-    display: flex;
-    flex-direction: column;
     width: 100%;
     min-height: 100vh;
-    background: url(Imagenes/fondoBlog) no-repeat center center/cover;
+    background: url(../Imagenes/fondo.png) no-repeat center center/cover;
     position: relative;
-    align-items: center;
 }
 
 .contenedor-fondoColor {
@@ -614,5 +622,27 @@ button:hover {
 
     .tituloServicios {
         align-items: center;
+    }
+
+    .textoBlog {
+        font-size: 60px;
+        text-align: center;
+    }
+
+    .descripcionBlog {
+        margin-left: 0px;
+    }
+
+    .contenedorDescripcion {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 350px;
+        align-items: center;
+        margin-left: 15px;
+        gap: 50px;
+    }
+
+    .navbar-toggle {
+        max-width: 50px;
     }
 }
