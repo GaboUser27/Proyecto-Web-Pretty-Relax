@@ -636,7 +636,7 @@ button:hover {
     .contenedorDescripcion {
         display: flex;
         flex-wrap: wrap;
-        max-width: 350px;
+        max-width: 335px;
         align-items: center;
         margin-left: 15px;
         gap: 50px;
