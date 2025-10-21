@@ -1,10 +1,15 @@
 const navbarToggle = document.querySelector('.navbar-toggle');
 const navbarMenu = document.querySelector('.navbar-menu');
+
 const botonesServiciosC = document.querySelectorAll(".botonesServicios button");
 const imagenesServiciosC = document.querySelectorAll(".imagenesServicios .imagen");
 const botonesEtiquetas = document.querySelectorAll(".botonesEtiquetas button");
+
 const etiquetasToggle = document.querySelector('.etiquetas-toggle');
 const botonesEtiquet = document.querySelector(".botonesEtiquetas");
+
+const contactosToggle = document.querySelector('.contactos-toggle');
+const infoContactos = document.querySelector(".infoContactos");
 
 //Listener para toggle de navbar
 navbarToggle.addEventListener('click', () => {
@@ -16,6 +21,12 @@ navbarToggle.addEventListener('click', () => {
 etiquetasToggle.addEventListener('click', () => {
     etiquetasToggle.classList.toggle('active');
     botonesEtiquet.classList.toggle('active');
+});
+
+//Listener para toggle de contactos
+contactosToggle.addEventListener('click', () => {
+    contactosToggle.classList.toggle('active');
+    infoContactos.classList.toggle('active');
 });
 
 //La funcion de selección por categoria de las imagenes
