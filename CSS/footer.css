@@ -1,0 +1,239 @@
+.footer {
+    position: relative;
+    width: 100%;
+    background: #502314;
+    background: linear-gradient(0deg, rgba(80, 35, 20, 1) 10%, rgba(125, 55, 31, 1) 32%, rgba(209, 77, 33, 1) 71%, rgba(247, 151, 7, 1) 100%);
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 5px;
+    flex-wrap: wrap;
+}
+
+.icon-elem {
+    list-style: none;
+}
+
+.icon {
+    color: white;
+    font-size: 32px;
+    display: inline-block;
+    margin: 0 10px;
+    transition: 0.5s;
+}
+
+.icon:hover {
+    transform: translateY(-10px);
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.menu-elem {
+    list-style: none;
+}
+
+.menu-icon {
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px 10px;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.menu-icon:hover {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+:root {
+    --footer-bg-1: #502314;
+    --footer-bg-2: #7d371f;
+    --footer-bg-3: #d14d21;
+    --footer-bg-4: #f79707;
+    --footer-text: #ffffff;
+    --footer-padding-vertical: 20px;
+    --footer-padding-horizontal: 24px;
+    --footer-max-width: 1200px;
+    --gap: 12px;
+    --menu-font: 16px;
+    --transition-fast: 180ms;
+    --focus-color: #ffd27a;
+}
+
+/* Reset básico para listas dentro del footer */
+.footer .social-icon,
+.footer .menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: var(--gap);
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Contenedor root */
+.footer {
+    width: 100%;
+    background: linear-gradient(0deg, var(--footer-bg-1) 10%, var(--footer-bg-2) 32%, var(--footer-bg-3) 71%, var(--footer-bg-4) 100%);
+    padding: var(--footer-padding-vertical) var(--footer-padding-horizontal);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    color: var(--footer-text);
+}
+
+/* Limitar ancho interno para centrar contenido en pantallas grandes */
+.footer>* {
+    width: 100%;
+    max-width: var(--footer-max-width);
+    box-sizing: border-box;
+}
+
+/* Iconos sociales: objetivo táctil y estilo */
+.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--icon-size);
+    height: var(--icon-size);
+    color: var(--footer-text);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform var(--transition-fast) ease, background-color var(--transition-fast) ease, color var(--transition-fast) ease;
+    background: transparent;
+}
+
+
+.icon ion-icon {
+    font-size: 22px;
+    width: 22px;
+    height: 22px;
+    line-height: 1;
+    display: block;
+}
+
+
+.icon:hover,
+.icon:focus {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.06);
+    outline: none;
+    color: var(--focus-color);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Foco accesible separado */
+.icon:focus-visible {
+    outline: 3px solid var(--focus-color);
+    outline-offset: 3px;
+}
+
+/* Menú de enlaces */
+.menu-icon {
+    color: var(--footer-text);
+    font-size: var(--menu-font);
+    text-decoration: none;
+    opacity: 0.75;
+    padding: 6px 8px;
+    border-radius: 6px;
+}
+
+.menu-icon:hover,
+.menu-icon:focus {
+    opacity: 1;
+    transform: translateY(-70px);
+}
+
+/* Leyenda final */
+.text {
+    text-align: center;
+    margin-top: 14px;
+    margin-bottom: 0;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/*pantallas grandes */
+@media (min-width: 768px) {
+    .footer {
+        padding: 32px 40px;
+    }
+
+    .menu-icon {
+        font-size: 18px;
+    }
+
+    .text {
+        font-size: 16px;
+    }
+}
+
+/* Desktop layout */
+@media (min-width: 1024px) {
+    .footer {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    .footer>* {
+        max-width: none;
+    }
+
+    .social-icon {
+        order: 1;
+    }
+
+    .menu {
+        order: 2;
+    }
+
+    .text {
+        order: 3;
+        margin-top: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .icon,
+    .menu-icon {
+        transition: none;
+    }
+
+    .icon:hover,
+    .menu-icon:hover {
+        transform: none;
+    }
+}
