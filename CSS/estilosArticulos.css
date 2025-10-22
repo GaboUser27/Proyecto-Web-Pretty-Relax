@@ -66,7 +66,8 @@ body {
     flex-direction: column;
     margin-left: 50px;
     height: 1180px;
-    width: 1800px;
+    max-width: 1800px;
+    width: 100%;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 15px;
     color: #fff;
@@ -103,7 +104,9 @@ body {
 
 .contenedor-descripcion {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
     max-height: 50px;
     max-width: 1800px;
     height: 100%;
@@ -384,12 +387,15 @@ button:hover {
 
     .contenedor-contenidoArticulo {
         margin-left: 15px;
-        height: 1180px;
+        height: 2770px;
         width: 350px;
     }
 
     .contenedor-cuerpoArticulo {
-        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-left: 25px;
     }
 
     .contenedor-tituloArticulo {
@@ -406,5 +412,29 @@ button:hover {
 
     .contenedorBotonTitulo {
         margin-left: 50px;
+    }
+
+    .contenedor-descripcion{
+        padding-left: 30px;
+        padding-right: 20px;
+    }
+
+    .imagen{
+        flex-basis: 300px;
+        max-height: 406px;
+    }
+
+    .imagen img{
+        height: 400px;
+    }
+
+    .contenedor-textoArticulo{
+        padding-top: 25px;
+        padding-left: 0px;
+        padding-right: 25px;
+    }
+
+    .contenedorBotonRegreso{
+        margin-top: 1600px;
     }
 }

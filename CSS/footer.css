@@ -171,7 +171,7 @@
 .menu-icon:hover,
 .menu-icon:focus {
     opacity: 1;
-    transform: translateY(-70px);
+    transform: translateY(-4px);
 }
 
 /* Leyenda final */

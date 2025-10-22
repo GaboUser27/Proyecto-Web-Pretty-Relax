@@ -627,6 +627,7 @@ button:hover {
     .textoBlog {
         font-size: 60px;
         text-align: center;
+        padding-left: 0px;
     }
 
     .descripcionBlog {
