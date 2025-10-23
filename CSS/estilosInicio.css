@@ -1,21 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
-.textoBienvenida{
+.textoBienvenida {
     font-family: serif;
     font-size: 50px;
 }
 
-body{
+body {
     font-family: "Jost", serif;
     min-height: 100vh;
     opacity: 80.5;
+}
+
+.contenedor-masajesLeft {
+    display: flex;
+    align-items: stretch;
+    gap: 1rem;
+    width: 100%;
+    max-width: 900px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin-left: 10%;
+}
+
+.contenedor-masajesLeft img {
+    flex: 0 0 120px;
+    max-width: 30%;
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.contenedortexto {
+    flex: 1 1 auto;
+    /* ocupa el resto del espacio y puede encogerse */
+    min-width: 0;
+    /* CRÍTICO: permite que el flex-item se reduzca dentro del padre */
+    overflow: hidden;
+    /* evita overflow visible */
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    /* opcional: centrar verticalmente el texto */
+    padding: 0.25rem 0;
+    /* opcional */
+}
+
+.contenedortexto .text {
+    margin: 0;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    line-height: 1.4;
+    padding-right: 10px;
+}
+
+.contenedor-masajesLeft img {
+    flex: 0 0 auto;
+    /* no crecer ni encogerse por defecto */
+    width: 390px;
+    /* tamaño base de la imagen en escritorio */
+    max-width: 60%;
+    /* nunca más del 30% del ancho del padre */
+    height: auto;
+    /* mantiene la proporción */
+    display: flex;
+    object-fit: cover;
+    /* recorta si la caja es más pequeña */
+    border-radius: 4px;
+    /* opcional */
 }
 
 .contenedor-imagen {
@@ -32,7 +93,7 @@ body{
     width: 100%;
     min-height: 100vh;
     background: #502314;
-    background: linear-gradient(180deg,rgba(80, 35, 20, 1) 10%, rgba(125, 55, 31, 1) 32%, rgba(209, 77, 33, 1) 71%, rgba(247, 151, 7, 1) 100%);
+    background: linear-gradient(180deg, rgba(80, 35, 20, 1) 10%, rgba(125, 55, 31, 1) 32%, rgba(209, 77, 33, 1) 71%, rgba(247, 151, 7, 1) 100%);
     background-size: cover;
     background-position: center top;
     background-attachment: fixed;
@@ -42,7 +103,7 @@ body{
     width: 100%;
     min-height: 100vh;
     background: #502314;
-    background: linear-gradient(to bottom,#1a0a05 0%,#4a1a0a 20%,#a8320c 45%,#d94f0f 70%,#f28c28 100%);
+    background: linear-gradient(to bottom, #1a0a05 0%, #4a1a0a 20%, #a8320c 45%, #d94f0f 70%, #f28c28 100%);
     background-size: cover;
     background-position: center top;
     background-attachment: fixed;
@@ -60,7 +121,7 @@ body{
     color: #fff;
 }
 
-.navbar{
+.navbar {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,7 +135,7 @@ body{
     z-index: 999;
 }
 
-.navbar-container{
+.navbar-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -83,7 +144,7 @@ body{
     max-width: 1600px;
 }
 
-.navbar-logo{
+.navbar-logo {
     font-size: 2rem;
     font-weight: 600;
     color: #fff;
@@ -91,14 +152,14 @@ body{
     cursor: pointer;
 }
 
-.navbar-container .navbar-menu{
+.navbar-container .navbar-menu {
     display: flex;
     text-align: center;
     gap: 1.5rem;
     list-style: none;
 }
 
-.navbar-container .navbar-menu li a{
+.navbar-container .navbar-menu li a {
     text-decoration: none;
     color: #fff;
     font-size: 1.3rem;
@@ -111,13 +172,13 @@ body{
 }
 
 .navbar-container .navbar-menu li a:hover,
-.navbar-container .navbar-menu li a.active{
+.navbar-container .navbar-menu li a.active {
     color: #162530;
     background: rgba(255, 165, 20, 0.8);
     border: 2px solid #fff;
 }
 
-.navbar-toggle{
+.navbar-toggle {
     display: none;
     background: transparent;
     padding: 10px;
@@ -125,7 +186,7 @@ body{
     cursor: pointer;
 }
 
-.bar{
+.bar {
     display: block;
     width: 25px;
     height: 3px;
@@ -135,12 +196,12 @@ body{
 }
 
 /*Tablets o celulares grandes*/
-@media (max-width: 880px){
-    .navbar{
+@media (max-width: 880px) {
+    .navbar {
         backdrop-filter: none;
     }
 
-    .navbar-container .navbar-menu{
+    .navbar-container .navbar-menu {
         display: none;
         flex-direction: column;
         align-items: flex-start;
@@ -155,24 +216,24 @@ body{
         backdrop-filter: blur(10px);
     }
 
-    .navbar-container .navbar-menu.active{
+    .navbar-container .navbar-menu.active {
         display: flex;
     }
 
-    .navbar-toggle{
+    .navbar-toggle {
         display: block;
         z-index: 999;
     }
 
-    .navbar-toggle.active .bar:nth-child(2){
+    .navbar-toggle.active .bar:nth-child(2) {
         opacity: 0;
     }
 
-    .navbar-toggle.active .bar:nth-child(1){
+    .navbar-toggle.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
 
-    .navbar-toggle.active .bar:nth-child(3){
+    .navbar-toggle.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
 
@@ -183,16 +244,18 @@ body{
         height: 300px;
         background: rgba(0, 0, 0, 0.5);
         border-radius: 15px;
-        width: 500px; /* Para que no se haga gigante */
+        width: 500px;
+        /* Para que no se haga gigante */
         text-align: center;
         color: #fff;
     }
 }
 
 /*Celulares*/
-@media (max-width:480px){    
-    
-    html, body {
+@media (max-width:480px) {
+
+    html,
+    body {
         width: 100%;
         height: 100%;
         overflow-x: hidden;
@@ -213,15 +276,17 @@ body{
     }
 
     .contenedor-central {
-        width: 90%; /* Ajusta al viewport */
-        max-width: 480px; /* Limita en móviles */
+        width: 90%;
+        /* Ajusta al viewport */
+        max-width: 480px;
+        /* Limita en móviles */
     }
 
-    .navbar-logo{
+    .navbar-logo {
         font-size: 1.7rem;
     }
 
-    .navbar-container .navbar-menu li a{
+    .navbar-container .navbar-menu li a {
         font-size: 1.2rem;
         padding: 3px 15px;
     }
