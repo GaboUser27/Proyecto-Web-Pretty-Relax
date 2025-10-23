@@ -18,7 +18,9 @@ body {
     opacity: 80.5;
 }
 
-.contenedor-masajesLeft {
+/* contenedores de servicios: left y right (limpios, sin duplicados) */
+.contenedor-masajesLeft,
+.contenedor-masajesright {
     display: flex;
     align-items: stretch;
     gap: 1rem;
@@ -28,31 +30,48 @@ body {
     overflow: hidden;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-    margin-left: 10%;
+    padding: 1rem;
 }
 
-.contenedor-masajesLeft img {
-    flex: 0 0 120px;
-    max-width: 30%;
-    width: 100%;
+/* posición específica */
+.contenedor-masajesLeft {
+    margin-left: 10%;
+    margin-right: 0;
+    transform: translateY(0);
+}
+
+.contenedor-masajesright {
+    margin-left: auto;
+    margin-right: 10%;
+    transform: translateY(1.4rem);
+    margin-bottom: 40px;
+    /* ajuste para que "baje" respecto al left */
+}
+
+/* imagenes: regla única aplicada a ambos contenedores */
+.contenedor-masajesLeft img,
+.contenedor-masajesright img {
+    flex: 0 0 auto;
+    /* no crecer ni encogerse por defecto */
+    width: 390px;
+    /* tamaño base en escritorio (tu valor original) */
+    max-width: 60%;
     height: auto;
     display: block;
     object-fit: cover;
+    border-radius: 4px;
 }
 
+/* protección del texto dentro de los contenedores */
 .contenedortexto {
     flex: 1 1 auto;
-    /* ocupa el resto del espacio y puede encogerse */
     min-width: 0;
-    /* CRÍTICO: permite que el flex-item se reduzca dentro del padre */
+    /* CRÍTICO para que el texto se encoja dentro del flex */
     overflow: hidden;
-    /* evita overflow visible */
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    /* opcional: centrar verticalmente el texto */
     padding: 0.25rem 0;
-    /* opcional */
 }
 
 .contenedortexto .text {
@@ -63,21 +82,46 @@ body {
     padding-right: 10px;
 }
 
-.contenedor-masajesLeft img {
-    flex: 0 0 auto;
-    /* no crecer ni encogerse por defecto */
-    width: 390px;
-    /* tamaño base de la imagen en escritorio */
-    max-width: 60%;
-    /* nunca más del 30% del ancho del padre */
-    height: auto;
-    /* mantiene la proporción */
-    display: flex;
-    object-fit: cover;
-    /* recorta si la caja es más pequeña */
-    border-radius: 4px;
-    /* opcional */
+/* Restaurar estilo global para los contenedores dentro de .servicios-list
+   (asegura comportamiento cuando están dentro de esa lista) */
+.servicios-list>.contenedor-masajesLeft,
+.servicios-list>.contenedor-masajesright {
+    width: 100%;
+    max-width: 900px;
+    padding: 1rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
 }
+
+/* comportamiento responsivo: apilar en pantallas pequeñas */
+@media (max-width: 800px) {
+
+    .contenedor-masajesLeft,
+    .contenedor-masajesright,
+    .servicios-list>.contenedor-masajesLeft,
+    .servicios-list>.contenedor-masajesright {
+        width: calc(100% - 2rem) !important;
+        margin-left: 1rem !important;
+        margin-right: 1rem !important;
+        transform: translateY(0) !important;
+        flex-direction: column;
+        align-items: stretch;
+        padding: .75rem;
+    }
+
+    .contenedor-masajesLeft img,
+    .contenedor-masajesright img {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 auto;
+        margin-bottom: .5rem;
+    }
+}
+
+
+
 
 .contenedor-imagen {
     display: flex;
@@ -292,3 +336,4 @@ body {
     }
 
 }
+
