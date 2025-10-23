@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pretty & Relax - Articulo Look</title>
     <link rel="stylesheet" href="CSS/estilosArticulos.css">
-
+    <link rel="stylesheet" href="CSS/comentarios.css">
 </head>
 <body class="contenedor-fondoColor">
     <!--Encabezado-->
@@ -74,11 +74,54 @@
             </section>
             
             <!--Comentarios-->
-            <section>
-                <p>Prueba</p>
+            <section class="comentarios">
+                <h2>Comentarios</h2>
+
+                <div id="lista-comentarios">
+                    <div class="comentario-box">
+                        <div class="comentario-header">
+                            <strong>Sofía Aguilar</strong>
+                            <div class="estrellas-mostradas">★★★★★</div>
+                        </div>
+                        <p>¡Una experiencia maravillosa! No solo lograron el tono exacto que quería, sino que también cuidaron la salud de mi cabello en todo momento. El equipo fue muy atento, resolvió todas mis dudas y me hizo sentir segura con cada paso. El resultado final superó mis expectativas: un look moderno, elegante y fácil de mantener. Sin duda, este será mi lugar de confianza para futuros cambios de imagen.</p>
+                    </div>
+                    <div class="comentario-box">
+                        <div class="comentario-header">
+                            <strong>Bianca Montoya</strong>
+                            <div class="estrellas-mostradas">★★★★☆</div>
+                        </div>
+                        <p>El servicio fue muy bueno, me atendieron con mucha amabilidad y el resultado quedó tal como lo esperaba. El personal fue profesional y me explicó todo el proceso, además el ambiente del lugar es agradable. Sin embargo, decidí dar 4 estrellas porque me gusta dejar siempre un margen para la perfección, no porque haya algo malo. ¡Definitivamente volvería y lo recomiendo!</p>
+                    </div>
+                    <div class="comentario-box">
+                        <div class="comentario-header">
+                            <strong>Cami_Alfaro❤️❤️</strong>
+                            <div class="estrellas-mostradas">★★★★★</div>
+                        </div>
+                        <p>Me encantó la experiencia completa. Desde el momento en que llegué, la atención fue increíblemente profesional y personalizada. Me explicaron cada paso del proceso, los productos que iban a utilizar y cómo cuidar mi cabello después del servicio. El resultado superó mis expectativas: el color quedó vibrante, con un brillo espectacular y una textura suave que no había sentido en mucho tiempo. Además, me dieron consejos prácticos para mantener el look por más tiempo sin dañar el cabello. Sin duda, volveré y recomendaré este lugar a todas mis amigas. ¡Gracias por devolverme la confianza en mi imagen!</p>
+                    </div>
+                </div>
+
+                <hr class="division">
+
+                <form id="form-comentario">
+                    <input type="text" id="nombre" placeholder="Tu nombre o perfil" required>
+                    <textarea id="comentario" placeholder="Escribe tu comentario..." required></textarea>
+                    
+                    <div class="acciones">
+                        <div class="estrellas">
+                            <span data-valor="1">★</span>
+                            <span data-valor="2">★</span>
+                            <span data-valor="3">★</span>
+                            <span data-valor="4">★</span>
+                            <span data-valor="5">★</span>
+                        </div>
+                        <button type="submit">Enviar</button>
+                    </div>
+                </form>
             </section>
 
-
+<!-- Aqui termina el comentario -->
+            <br><br><br>
             <center>
                 <section class="contenedorBotonRegreso">
                     <button class="botonRegresar">
@@ -87,7 +130,7 @@
                 </section>
             </center>
         </div>
-        <br><br>
+        <br><br><br>
     </main>
 
     <!--Footer-->
@@ -137,5 +180,6 @@
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> -->
+    <script src="JS/scriptComentarios.js"></script>
 </body>
 </html>

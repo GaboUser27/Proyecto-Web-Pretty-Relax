@@ -65,7 +65,7 @@ body {
     display: flex;
     flex-direction: column;
     margin-left: 50px;
-    height: 1180px;
+    height: auto;
     max-width: 1800px;
     width: 100%;
     background: rgba(0, 0, 0, 0.5);
@@ -100,6 +100,7 @@ body {
 .contenedorBotonRegreso {
     max-width: 500px;
     margin-left: 0;
+    margin-bottom: 50px;
 }
 
 .contenedor-descripcion {
@@ -111,16 +112,15 @@ body {
     max-width: 1800px;
     height: 100%;
     width: 100%;
-    padding: 10px 80px;
+    padding: 10px 90px;
     align-items: center;
 }
 
 .contenedor-cuerpoArticulo {
     display: flex;
     flex-direction: row;
-    max-height: 800px;
     max-width: 1800px;
-    height: 100%;
+    height: auto;
     width: 100%;
     padding-left: 70px;
 }
@@ -387,7 +387,6 @@ button:hover {
 
     .contenedor-contenidoArticulo {
         margin-left: 15px;
-        height: 2770px;
         width: 350px;
     }
 
@@ -432,9 +431,5 @@ button:hover {
         padding-top: 25px;
         padding-left: 0px;
         padding-right: 25px;
-    }
-
-    .contenedorBotonRegreso{
-        margin-top: 1600px;
     }
 }
