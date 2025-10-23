@@ -151,6 +151,7 @@ body {
     background-size: cover;
     background-position: center top;
     background-attachment: fixed;
+    height: auto;
 }
 
 .autoShow {
@@ -354,11 +355,12 @@ body {
 .team-section {
     width: 100%;
     max-width: 1200px;
-    margin: 3rem auto;
+    margin: auto;
     padding: 0 1rem;
     box-sizing: border-box;
     color: #162530;
     font-family: "Jost", system-ui, Arial, sans-serif;
+    background: transparent;
 }
 
 /* --- HERO: imagen izquierda, texto derecha --- */
@@ -385,6 +387,14 @@ body {
     object-fit: cover;
     border-radius: 12px;
     filter: saturate(0.98) contrast(0.96);
+}
+
+.team-card__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 0;
 }
 
 /* crédito de imagen */
@@ -440,6 +450,7 @@ body {
     flex-direction: column;
     text-align: center;
     padding-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 /* imagen del miembro */
