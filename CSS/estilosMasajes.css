@@ -122,3 +122,48 @@
     font-size: 1.3rem;
     font-weight: 500;
 }
+
+.carusel{
+    margin-top: 40px;
+    margin-left: 50px;
+    width: 90%;
+    border-radius: 20px;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: auto;
+    gap: 20px;
+}
+
+.carusel::-webkit-scrollbar {
+    display: none;
+}
+
+.grupoCards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    animation: spin 15s infinite linear;
+}
+
+.card{
+    width: 500px;
+    height: 500px;
+    padding: 10px;
+    box-shadow: 10px 10px 10px rgb(0, 0, 0, 0.5);
+    border-radius: 20px;
+    text-align: center;
+    align-content: center;
+}
+
+.card img{
+    height: 500px;
+    width: 500px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+@keyframes spin {
+    from {translate: 0}
+    to {translate: -100%;}
+}
