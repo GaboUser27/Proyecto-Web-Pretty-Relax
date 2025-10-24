@@ -57,7 +57,7 @@
 
 .contenedor-cuerpoArticulo {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     max-width: 1800px;
     height: auto;
     width: 100%;
@@ -68,13 +68,13 @@
     display: flex;
     flex-direction: column;
     max-height: 705px;
-    max-width: 1200px;
+    max-width: 1610px;
     height: 100%;
     width: 100%;
-    padding: 10px 70px 0px 50px;
+    padding: 60px 0px 0px 50px;
     text-align: justify;
     font-family: "Jost", serif;
-    font-size: 1.11rem;
+    font-size: 1.4rem;
 }
 
 .botonAgendar {
@@ -124,8 +124,8 @@
 }
 
 .carusel{
-    margin-top: 40px;
     margin-left: 50px;
+    height: 520px;
     width: 90%;
     border-radius: 20px;
     display: flex;
@@ -140,7 +140,6 @@
 
 .grupoCards{
     display: flex;
-    align-items: center;
     justify-content: center;
     gap: 20px;
     animation: spin 15s infinite linear;
@@ -166,4 +165,90 @@
 @keyframes spin {
     from {translate: 0}
     to {translate: -100%;}
+}
+
+/*Celulares*/
+@media (max-width:480px) {
+
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .contenedor-imagen,
+    .contenedor-fondoColor {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .contenedor-central {
+        width: 90%;
+        /* Ajusta al viewport */
+        max-width: 480px;
+        /* Limita en móviles */
+    }
+
+    .contenedor-contenidoArticulo {
+        margin-left: 15px;
+        width: 350px;
+    }
+
+    .contenedor-cuerpoArticulo {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-left: 0px;
+        align-content: center;
+    }
+
+    .contenedor-tituloArticulo {
+        padding-left: 10px;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .tituloArticulo {
+        font-size: 20px;
+        margin-left: 55px;
+        text-align: center;
+    }
+
+    .contenedorBotonTitulo {
+        margin-left: 50px;
+    }
+
+    .contenedor-descripcion{
+        padding-left: 30px;
+        padding-right: 20px;
+    }
+
+    .imagen{
+        flex-basis: 300px;
+        max-height: 406px;
+    }
+
+    .imagen img{
+        height: 400px;
+    }
+
+    .contenedor-textoArticulo{
+        padding-left: 25px;
+        padding-right: 25px;
+        font-size: 1rem;
+    }
+
+    .carusel{
+        height: 320px;
+        margin-left: 0px;
+    }
+
+    .card, .card img{
+        height: 300px;
+        width: 300px;
+    }
+
+    .comentarios{
+        margin-top: 1000px;
+    }
 }
