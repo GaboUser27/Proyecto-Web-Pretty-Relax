@@ -224,6 +224,21 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
+select{
+    padding: 10px;
+    border-radius: 10rem;
+}
+
+#google_translate_element {
+    display: none;
+}
+.goog-te-banner-frame {
+    display: none !important;
+}
+body {
+    top: 0 !important;
+}
+
 /*Tablets o celulares grandes*/
 @media (max-width: 880px) {
     .navbar {
