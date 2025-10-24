@@ -461,7 +461,7 @@ body {
     flex-direction: column;
     text-align: center;
     padding-bottom: 1rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: white;
 }
 
 /* imagen del miembro */
@@ -497,7 +497,7 @@ body {
 
 .team-card__role {
     font-size: 0.9rem;
-    color: #e9eef0;
+    color: #000;
     margin: 0;
     line-height: 1.4;
 }
@@ -627,7 +627,7 @@ body {
         width: 100%;
         max-width: 100%;
         margin: 0 auto;
-        background: rgba(255, 255, 255, 0.1);
+        background: white;
     }
 
     .team-card__media {
