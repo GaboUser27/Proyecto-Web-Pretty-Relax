@@ -95,34 +95,6 @@ body {
     border-radius: 10px;
 }
 
-/* comportamiento responsivo: apilar en pantallas pequeñas */
-@media (max-width: 800px) {
-
-    .contenedor-masajesLeft,
-    .contenedor-masajesright,
-    .servicios-list>.contenedor-masajesLeft,
-    .servicios-list>.contenedor-masajesright {
-        width: calc(100% - 2rem) !important;
-        margin-left: 1rem !important;
-        margin-right: 1rem !important;
-        transform: translateY(0) !important;
-        flex-direction: column;
-        align-items: stretch;
-        padding: .75rem;
-    }
-
-    .contenedor-masajesLeft img,
-    .contenedor-masajesright img {
-        width: 100%;
-        max-width: 100%;
-        flex: 0 0 auto;
-        margin-bottom: .5rem;
-    }
-}
-
-
-
-
 .contenedor-imagen {
     display: flex;
     flex-direction: column;
@@ -305,6 +277,27 @@ body {
         /* Para que no se haga gigante */
         text-align: center;
         color: #fff;
+    }
+
+    .contenedor-masajesLeft,
+    .contenedor-masajesright,
+    .servicios-list>.contenedor-masajesLeft,
+    .servicios-list>.contenedor-masajesright {
+        width: calc(100% - 2rem) !important;
+        margin-left: 1rem !important;
+        margin-right: 1rem !important;
+        transform: translateY(0) !important;
+        flex-direction: column;
+        align-items: stretch;
+        padding: .75rem;
+    }
+
+    .contenedor-masajesLeft img,
+    .contenedor-masajesright img {
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 auto;
+        margin-bottom: .5rem;
     }
 }
 
