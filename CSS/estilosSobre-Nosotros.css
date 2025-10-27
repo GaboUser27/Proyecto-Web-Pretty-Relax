@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+TAS:wght@100..400&display=swap');
-
-
-
-
 .botonRegresar {
     padding: 10px 20px;
     font-size: 18px;
@@ -18,13 +14,6 @@
     transition: background-color 0.7s ease, color 0.7s ease, border-color 0.7s ease;
     white-space: nowrap;
 }
-
-/* ====== Responsive ====== */
-
-/**************************FIN DEL HEADER***********************/
-/*INICIO DEL MAIN*******************************/
-
-
 #sobre {
     --bg-1: #1a0a05;
     --bg-2: #3b1408;
@@ -43,8 +32,6 @@
     --radius-xl: 22px;
     --blur: saturate(110%) blur(6px);
 }
-
-
 #sobre {
     font-family: "Jost", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     color: var(--text);
