@@ -1,22 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
+
 
 .textoBienvenida {
     font-family: serif;
     font-size: 50px;
 }
 
-body {
-    font-family: "Jost", serif;
-    min-height: 100vh;
-    opacity: 80.5;
-}
 
 /* contenedores de servicios: left y right (limpios, sin duplicados) */
 .contenedor-masajesLeft,
@@ -149,38 +139,6 @@ body {
     text-align: center;
     color: #fff;
 }
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
-    width: 100%;
-    position: sticky;
-    top: 0;
-    background: transparent;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-    z-index: 999;
-}
-
-.navbar-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 2rem;
-    max-width: 1600px;
-}
-
-.navbar-logo {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #fff;
-    text-decoration: none;
-    cursor: pointer;
-}
-
 .navbar-container .navbar-menu {
     display: flex;
     text-align: center;
@@ -241,45 +199,6 @@ body {
 
 /*Tablets o celulares grandes*/
 @media (max-width: 880px) {
-    .navbar {
-        backdrop-filter: none;
-    }
-
-    .navbar-container .navbar-menu {
-        display: none;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.7rem !important;
-        position: absolute;
-        height: 100vh;
-        width: 250px;
-        top: 0;
-        right: 0;
-        padding: 5rem 1.5rem;
-        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(10px);
-    }
-
-    .navbar-container .navbar-menu.active {
-        display: flex;
-    }
-
-    .navbar-toggle {
-        display: block;
-        z-index: 999;
-    }
-
-    .navbar-toggle.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .navbar-toggle.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .navbar-toggle.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
 
     .contenedor-central {
         display: flex;
@@ -319,20 +238,6 @@ body {
 /*Celulares*/
 @media (max-width:480px) {
 
-    html,
-    body {
-        width: 100%;
-        height: 100%;
-        overflow-x: hidden;
-    }
-
-    .contenedor-imagen,
-    .contenedor-Noimagen {
-        max-width: 100%;
-        max-height: 100%;
-        overflow-x: hidden;
-    }
-
     .navbar-container {
         width: 100%;
         max-width: 100%;
@@ -346,16 +251,6 @@ body {
         max-width: 480px;
         /* Limita en móviles */
     }
-
-    .navbar-logo {
-        font-size: 1.7rem;
-    }
-
-    .navbar-container .navbar-menu li a {
-        font-size: 1.2rem;
-        padding: 3px 15px;
-    }
-
 }
 
 /**/

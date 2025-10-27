@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
+
 
 .textoBlog {
     font-family: serif;
@@ -25,48 +20,13 @@
     width: auto;
 }
 
-body {
-    font-family: "Jost", serif;
-    min-height: 100vh;
-    opacity: 80.5;
 
-    word-wrap: break-word;
-    /* Permite cortar palabras largas */
-    overflow-wrap: break-word;
-    /* Alternativa moderna */
-    white-space: norma
-}
 
 .contenedor-imagen {
     width: 100%;
     min-height: 100vh;
     background: url(../Imagenes/fondo.png) no-repeat center center/cover;
     position: relative;
-}
-
-.contenedor-fondoColor {
-    width: 100%;
-    min-height: 100vh;
-    background: #502314;
-
-    background: linear-gradient(to bottom,
-            #1a0a05 0%,
-            /* Marrón muy oscuro para el header */
-            #3b1408 5%,
-            /* Marrón cálido profundo */
-            #a63c0c 35%,
-            /* Naranja rojizo sutil */
-            #d95f1c 50%,
-            /* Naranja brillante (punto focal) */
-            #8c2f0a 70%,
-            /* Rojo-marrón cálido */
-            #2a0f0a 800%
-            /* Marrón oscuro profundo */
-        );
-
-    background-size: cover;
-    background-position: center top;
-    background-attachment: fixed;
 }
 
 .contenedor-Base {
@@ -126,13 +86,6 @@ button {
     white-space: nowrap;
 }
 
-button.active,
-button:hover {
-    color: #162530;
-    background: rgba(255, 166, 50, 0.8);
-    border: 2px solid #fff;
-}
-
 .imagenesServicios {
     display: flex;
     margin-top: 35px;
@@ -168,11 +121,11 @@ button:hover {
     border-radius: 8px;
 }
 
-.imagen #corte4{
+.imagen #corte4 {
     background: linear-gradient(180deg, #f3f3f3 0%, #d9d9d9 100%);
 }
 
-#corte4{
+#corte4 {
     object-fit: contain;
 }
 
@@ -306,80 +259,6 @@ button:hover {
 .textoContactos {
     font-size: 26px;
     font-family: "Jost", serif;
-}
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
-    width: 100%;
-    position: sticky;
-    top: 0;
-    background: transparent;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-    z-index: 999;
-}
-
-.navbar-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 2rem;
-    max-width: 1600px;
-}
-
-.navbar-logo {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #fff;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.navbar-container .navbar-menu {
-    display: flex;
-    text-align: center;
-    gap: 1.5rem;
-    list-style: none;
-}
-
-.navbar-container .navbar-menu li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.3rem;
-    font-weight: 500;
-    padding: 3px 20px;
-    border-radius: 20px;
-    border: 2px solid transparent;
-    transition: all 0.7s ease;
-    white-space: nowrap;
-}
-
-.navbar-container .navbar-menu li a:hover,
-.navbar-container .navbar-menu li a.active {
-    color: #162530;
-    background: rgba(255, 165, 20, 0.8);
-    border: 2px solid #fff;
-}
-
-.navbar-toggle {
-    display: none;
-    background: transparent;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-}
-
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    background: #fff;
-    transition: all 0.3s ease-in-out;
 }
 
 .etiquetas-toggle {
@@ -517,11 +396,7 @@ button:hover {
 /*Celulares*/
 @media (max-width:480px) {
 
-    html,
-    body {
-        width: 100%;
-        overflow-x: hidden;
-    }
+
 
     .contenedor-imagen,
     .contenedor-Noimagen {
@@ -529,12 +404,7 @@ button:hover {
         overflow-x: hidden;
     }
 
-    .navbar-container {
-        width: 100%;
-        max-width: 100%;
-        padding: 0 1rem;
-        box-sizing: border-box;
-    }
+
 
     .contenedor-central {
         width: 90%;
@@ -543,14 +413,6 @@ button:hover {
         /* Limita en móviles */
     }
 
-    .navbar-logo {
-        font-size: 1.7rem;
-    }
-
-    .navbar-container .navbar-menu li a {
-        font-size: 1.2rem;
-        padding: 3px 15px;
-    }
 
     .textoBlog,
     .contenedor-etiquetasContactos {
@@ -589,10 +451,6 @@ button:hover {
         /* Evita que cada botón exceda el contenedor */
     }
 
-    button {
-        background: #fff;
-        max-width: 200px;
-    }
 
     .contenedor-contactos,
     .contenedorContactosGeneral {
@@ -650,7 +508,5 @@ button:hover {
         gap: 50px;
     }
 
-    .navbar-toggle {
-        max-width: 50px;
-    }
+
 }
