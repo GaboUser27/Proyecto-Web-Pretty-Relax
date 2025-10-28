@@ -18,6 +18,12 @@
     transition: background-color 0.7s ease, color 0.7s ease, border-color 0.7s ease;
     white-space: nowrap;
 }
+
+.botonRegresar a{
+    text-decoration: none;
+    color: #000;
+}
+
 #sobre {
     --bg-1: #1a0a05;
     --bg-2: #3b1408;
