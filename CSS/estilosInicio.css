@@ -328,20 +328,21 @@ body {
 }
 
 
+
 @media (max-width: 480px) {
-
-    .videoPrettyAndRelax {
-
-        height: 80vh;
-        height: 80svh;
-        height: 80dvh;
-        border-radius: 10px;
-        box-shadow: 0 6px 18px rgba(8, 20, 26, 0.08);
+    .videoPrettyAndRelax_contenido {
+        max-width: 150px;
     }
-
-
-
+    .videoPrettyAndRelax {
+        width: 100%;
+        margin-bottom: 1.5rem;
+        aspect-ratio: 21 / 9;
+        height: 60%;
+    }
 }
+
+
+
 
 .seccion-cards_video {
     width: 100%;
@@ -351,7 +352,6 @@ body {
     border-radius: 0;
 }
 
-/* crédito de imagen */
 .seccion-inicio-pastillita {
     font-size: 0.75rem;
     color: rgba(0, 0, 0, 0.55);
