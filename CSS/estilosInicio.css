@@ -20,7 +20,7 @@
     background: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     padding: 1rem;
-    
+
 }
 
 .contenedor-masajesLeft {
@@ -138,6 +138,7 @@
     text-align: center;
     color: #fff;
 }
+
 .navbar-container .navbar-menu {
     display: flex;
     text-align: center;
@@ -181,7 +182,7 @@
     transition: all 0.3s ease-in-out;
 }
 
-select{
+select {
     padding: 10px;
     border-radius: 10rem;
 }
@@ -189,14 +190,16 @@ select{
 #google_translate_element {
     display: none;
 }
+
 .goog-te-banner-frame {
     display: none !important;
 }
+
 body {
     top: 0 !important;
 }
 
-/*Tablets o celulares grandes*/
+
 @media (max-width: 880px) {
 
     .contenedor-central {
@@ -207,7 +210,7 @@ body {
         background: rgba(0, 0, 0, 0.5);
         border-radius: 15px;
         width: 500px;
-        /* Para que no se haga gigante */
+
         text-align: center;
         color: #fff;
     }
@@ -263,7 +266,6 @@ body {
     background: transparent;
 }
 
-/* --- HERO: imagen izquierda, texto derecha --- */
 .seccion {
     padding-top: 20%;
     padding-bottom: 20%;
@@ -289,6 +291,51 @@ body {
     object-fit: cover;
     border-radius: 12px;
     filter: saturate(0.98) contrast(0.96);
+}
+
+
+.videoPrettyAndRelax {
+    width: min(100%, 900px);
+    margin: 0 auto 2rem;
+    aspect-ratio: 16 / 9;
+    background: #e9eef0;
+    border-radius: 12px;    
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+
+.videoPrettyAndRelax__contenido {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+@media (max-width: 980px) {
+    .videoPrettyAndRelax {
+        width: min(100%, 760px);
+        margin-bottom: 1.75rem;
+        aspect-ratio: 16 / 9;
+    }
+}
+
+@media (max-width: 640px) {
+    .videoPrettyAndRelax {
+        width: 100%;
+        margin-bottom: 1.5rem;
+        aspect-ratio: 21 / 9;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .videoPrettyAndRelax {
+        border-radius: 10px;
+        box-shadow: 0 6px 18px rgba(8, 20, 26, 0.08);
+    }
 }
 
 .seccion-cards_video {
@@ -513,7 +560,7 @@ body {
         gap: 1.5rem;
         width: 100%;
     }
-    
+
     .seccion-cards {
         width: 100%;
         max-width: 100%;
@@ -572,4 +619,3 @@ body {
         padding: 0;
     }
 }
-
