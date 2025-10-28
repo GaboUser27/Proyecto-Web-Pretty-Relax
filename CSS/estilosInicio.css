@@ -34,16 +34,16 @@
     margin-right: 10%;
     transform: translateY(1.4rem);
     margin-bottom: 40px;
-    /* ajuste para que "baje" respecto al left */
+
 }
 
-/* imagenes: regla única aplicada a ambos contenedores */
+
 .contenedor-masajesLeft img,
 .contenedor-masajesright img {
     flex: 0 0 auto;
-    /* no crecer ni encogerse por defecto */
+
     width: 390px;
-    /* tamaño base en escritorio (tu valor original) */
+
     max-width: 60%;
     height: auto;
     display: block;
@@ -51,11 +51,11 @@
     border-radius: 4px;
 }
 
-/* protección del texto dentro de los contenedores */
+
 .contenedortexto {
     flex: 1 1 auto;
     min-width: 0;
-    /* CRÍTICO para que el texto se encoja dentro del flex */
+
     overflow: hidden;
     box-sizing: border-box;
     display: flex;
@@ -71,8 +71,6 @@
     padding-right: 10px;
 }
 
-/* Restaurar estilo global para los contenedores dentro de .servicios-list
-   (asegura comportamiento cuando están dentro de esa lista) */
 .servicios-list>.contenedor-masajesLeft,
 .servicios-list>.contenedor-masajesright {
     width: 100%;
@@ -121,7 +119,6 @@
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* estado cuando está visible */
 .autoShow.is-visible {
     opacity: 1;
     transform: translateY(0);
@@ -299,7 +296,7 @@ body {
     margin: 0 auto 2rem;
     aspect-ratio: 16 / 9;
     background: #e9eef0;
-    border-radius: 12px;    
+    border-radius: 12px;
     overflow: hidden;
     display: grid;
     place-items: center;
@@ -332,10 +329,18 @@ body {
 
 
 @media (max-width: 480px) {
+
     .videoPrettyAndRelax {
+
+        height: 80vh;
+        height: 80svh;
+        height: 80dvh;
         border-radius: 10px;
         box-shadow: 0 6px 18px rgba(8, 20, 26, 0.08);
     }
+
+
+
 }
 
 .seccion-cards_video {
@@ -440,7 +445,7 @@ body {
     line-height: 1.4;
 }
 
-/* redes sociales (pequeños círculos) */
+
 .team-card__socials {
     display: flex;
     gap: 0.5rem;
@@ -448,7 +453,7 @@ body {
     margin-top: 0.25rem;
 }
 
-/* Si usas iconos SVG dentro del <a>, estos estilos funcionan bien */
+
 .social {
     width: 34px;
     height: 34px;
@@ -469,7 +474,7 @@ body {
     color: #081a1f;
 }
 
-/* --- Responsive --- */
+
 @media (max-width: 980px) {
     .seccion {
         grid-template-columns: 1fr;
