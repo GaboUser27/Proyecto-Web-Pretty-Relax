@@ -194,8 +194,6 @@
     }
 }
 
-/************************************/
-
 #sobre .card_contenido .card__media>.card__title,
 #sobre .card_contenido .card__media>.card__text,
 #sobre .card_contenido .card__media>.pastillas {
@@ -431,7 +429,6 @@
     animation-delay: .06s;
 }
 
-/* --------- Ajustes responsivos globales --------- */
 @media (max-width: 1080px) {
     #sobre {
         width: min(980px, 94vw);
@@ -457,10 +454,8 @@
     object-fit: cover;
 }
 
-/* Reduce el aspect-ratio en pantallas pequeñas y evita overflow */
 #sobre .card_contenido .card__media {
     aspect-ratio: 21 / 9;
-    /* valor por defecto para desktop */
     width: 100%;
     overflow: hidden;
     border-radius: var(--radius-lg);
@@ -468,16 +463,15 @@
     box-sizing: border-box;
 }
 
-/* En pantallas pequeñas coloca el contenido encima del flujo (no absolute) */
 @media (max-width: 640px) {
 
-    /* Hero media con ratio más vertical para móviles */
+
     #sobre .card_contenido .card__media {
         aspect-ratio: 16 / 9;
         padding: 0;
     }
 
-    /* Evita que el título y texto estén demasiado desplazados; los colocamos en flujo */
+
     #sobre .card_contenido .card__media>.card__title,
     #sobre .card_contenido .card__media>.card__text,
     #sobre .card_contenido .card__media>.pastillas {
@@ -489,7 +483,6 @@
         text-shadow: none;
     }
 
-    /* Título más legible y tamaño controlado en móviles */
     #sobre .card_contenido .card__media>.card__title {
         font-size: clamp(1.1rem, 3.6vw, 1.45rem);
         color: #fff;
@@ -511,8 +504,6 @@
     }
 }
 
-/* Si en algún punto el título queda encima de la imagen con position absolute en desktop,
-   mantenemos la versión desktop pero con límites para que no salga del viewport */
 @media (min-width: 641px) {
     #sobre .card_contenido .card__media>.card__title {
         bottom: clamp(56px, 8vw, 120px);
@@ -528,19 +519,14 @@
     }
 }
 
-/* Asegura que el contenedor del hero no provoque scroll horizontal */
 #sobre .card_contenido,
 #sobre .card_contenido .card__media {
     max-width: 100%;
     box-sizing: border-box;
 }
 
-/* Si usas transform/scale en .card__img, limita overflow visual en móviles */
 @media (max-width: 480px) {
     #sobre .card_contenido .card__img {
         transform: none;
     }
 }
-
-
-/*****************/
