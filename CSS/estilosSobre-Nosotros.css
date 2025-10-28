@@ -372,8 +372,8 @@
     line-height: 1.65;
 }
 
-/* --------- CTA final --------- */
-#sobre .card--cta {
+
+#sobre .card--contactanos {
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.2);
     background:
