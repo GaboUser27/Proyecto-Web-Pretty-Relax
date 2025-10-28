@@ -40,15 +40,12 @@
 
     </header>
     <!--Main-->
-    <main id="sobre" class="sobre sobre--cartas" aria-labelledby="titulo-sobre">
+    <main id="sobre" class="sobre sobre--cartas">
 
-        <!-- ===== INTRO / HERO EN CARTA ===== -->
         <section class="bloque">
             <h1 id="titulo-sobre">Sobre Pretty & Relax</h1>
-
-            <article class="card card--hero">
+            <article class="card card_contenido">
                 <div class="card__media">
-                    <!-- Reemplaza por tu imagen -->
                     <img src="Imagenes/fondo.png" alt="Imagen Spa Pretty And Relax" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
                     <h2 class="card__title">Donde la calma sucede… y te invita a quedarte</h2>
                     <p class="card__text">
@@ -56,19 +53,18 @@
                         livianos, el tacto conversa y cada detalle susurra: <strong>estás en buenas manos</strong>.
                     </p>
 
-                    <ul class="pills">
-                        <li class="pill">Tacto consciente</li>
-                        <li class="pill">Rituales a tu medida</li>
-                        <li class="pill">Silencio que repara</li>
+                    <ul class="pastillas">
+                        <li class="pastilla">Tacto consciente</li>
+                        <li class="pastilla">Rituales a tu medida</li>
+                        <li class="pastilla">Silencio que repara</li>
                     </ul>
                 </div>
             </article>
         </section>
         <br>
 
-        <!-- ===== QUÉ NOS HACE DIFERENTES (3 CARTAS) ===== -->
         <section class="bloque ">
-            <h2 id="diferenciales" class="bloque__title">Lo que nos hace distintos</h2>
+            <h2 class="bloque__title">Lo que nos hace distintos</h2>
 
             <div class="cards-grid">
                 <article class="card">
@@ -104,25 +100,25 @@
         </section>
         <br>
 
-        <section class="bloque bloque--metodo">
-            <h2 id="metodo" class="bloque__title">Nuestro método</h2>
+        <section class="bloque">
+            <h2 class="bloque__title">Nuestro método</h2>
 
-            <article class="card card--accent">
+            <article class="card metodo">
                 <div class="card__body">
-                    <ol class="steps">
-                        <li class="step">
-                            <h3 class="step__title">1 · Conectar</h3>
-                            <p class="step__text">Un breve ritual de bienvenida para bajar revoluciones y reconocer lo
+                    <ol class="pasos">
+                        <li class="paso">
+                            <h3 class="paso__title">1 · Conectar</h3>
+                            <p class="paso__text">Un breve ritual de bienvenida para bajar revoluciones y reconocer lo
                                 que necesitas hoy.</p>
                         </li>
-                        <li class="step">
-                            <h3 class="step__title">2 · Personalizar</h3>
-                            <p class="step__text">Técnica, ritmo y presión adaptados a tu objetivo: soltar, recuperar,
+                        <li class="paso">
+                            <h3 class="paso__title">2 · Personalizar</h3>
+                            <p class="paso__text">Técnica, ritmo y presión adaptados a tu objetivo: soltar, recuperar,
                                 iluminar, o todo a la vez.</p>
                         </li>
-                        <li class="step">
-                            <h3 class="step__title">3 · Acompañar</h3>
-                            <p class="step__text">Pequeñas pautas post‑sesión para extender la sensación: respiraciones,
+                        <li class="paso">
+                            <h3 class="paso__title">3 · Acompañar</h3>
+                            <p class="paso__text">Pequeñas pautas post‑sesión para extender la sensación: respiraciones,
                                 estiramientos, cuidado de piel.</p>
                         </li>
                     </ol>
@@ -132,7 +128,7 @@
 
         <br>
         <section class="bloque bloque--higiene">
-            <h2 id="higiene" class="bloque__title">Higiene y confianza</h2>
+            <h2  class="bloque__title">Higiene y confianza</h2>
 
             <article class="card">
                 <div class="card__body">
@@ -147,7 +143,7 @@
 
         <br>
         <section class="bloque">
-            <h2 id="equipo" class="bloque__title">Quienes sostienen la experiencia</h2>
+            <h2 id="team" class="bloque__title">Quienes sostienen la experiencia</h2>
 
             <div class="team-grid">
                 <article class="team-card">
@@ -182,6 +178,37 @@
                             Especializada en tratamientos faciales y el cuidado del cuero cabelludo, terapias
                             capilares y manejo de equipos de última tecnología. Organizada y con experiencia
                             en atención&nbsp;al&nbsp;cliente.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="team-card">
+                    <div class="team-card__media">
+                        <img src="Imagenes/Gabriel Rojas.jpg" alt="Gabriel Rojas"
+                            class="team-card__image">
+                    </div>
+                    <div class="team-card__body">
+                        <h3 class="team-card__name">Gabriel Rojas</h3>
+                        <p class="team-card__role">
+                            Estudiante Ingenieria del Software UTN
+                        </p>
+                        <p class="team-card__desc">
+                            Soporte Tecnico
+                        </p>
+                    </div>
+                </article>
+                <article class="team-card">
+                    <div class="team-card__media">
+                        <img src="Imagenes/Abraham Matus.jpg" alt="Abraham Matus"
+                            class="team-card__image">
+                    </div>
+                    <div class="team-card__body">
+                        <h3 class="team-card__name">Abraham Matus</h3>
+                        <p class="team-card__role">
+                            Estudiante Ingenieria del Software UTN
+                        </p>
+                        <p class="team-card__desc">
+                            Soporte Tecnico
                         </p>
                     </div>
                 </article>
@@ -254,6 +281,7 @@
     </footer>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="JS/script.js"></script>    
 </body>
 
 </html>

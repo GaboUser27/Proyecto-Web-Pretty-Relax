@@ -18,13 +18,6 @@
     transition: background-color 0.7s ease, color 0.7s ease, border-color 0.7s ease;
     white-space: nowrap;
 }
-
-/* ====== Responsive ====== */
-
-/**************************FIN DEL HEADER***********************/
-/*INICIO DEL MAIN*******************************/
-
-
 #sobre {
     --bg-1: #1a0a05;
     --bg-2: #3b1408;
@@ -128,7 +121,7 @@
 }
 
 
-#sobre .card--hero .card__media {
+#sobre .card_contenido .card__media {
     aspect-ratio: 21/9;
     border-radius: var(--radius-lg);
     overflow: hidden;
@@ -203,37 +196,37 @@
 
 /************************************/
 
-#sobre .card--hero .card__media>.card__title,
-#sobre .card--hero .card__media>.card__text,
-#sobre .card--hero .card__media>.pills {
+#sobre .card_contenido .card__media>.card__title,
+#sobre .card_contenido .card__media>.card__text,
+#sobre .card_contenido .card__media>.pastillas {
     position: absolute;
     left: clamp(14px, 4vw, 42px);
     right: clamp(14px, 4vw, 42px);
 }
 
-#sobre .card--hero .card__media>.card__title {
+#sobre .card_contenido .card__media>.card__title {
     bottom: clamp(96px, 12vw, 140px);
     font-size: clamp(1.3rem, 1rem + 2vw, 2.2rem);
     text-shadow: 0 8px 26px rgba(0, 0, 0, .45);
 }
 
-#sobre .card--hero .card__media>.card__text {
+#sobre .card_contenido .card__media>.card__text {
     bottom: clamp(64px, 8.2vw, 92px);
     max-width: 58ch;
     color: #eef4f7;
     text-shadow: 0 6px 18px rgba(0, 0, 0, .38);
 }
 
-#sobre .card--hero .pills {
+#sobre .card_contenido .pastillas {
     bottom: clamp(20px, 4.6vw, 40px);
 }
 
-#sobre .card--hero:hover .card__img {
+#sobre .card_contenido:hover .card__img {
     transform: scale(1.06);
     filter: saturate(1.05) contrast(1.02);
 }
 
-#sobre .pills {
+#sobre .pastillas {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
@@ -242,7 +235,7 @@
     margin: 0;
 }
 
-#sobre .pill {
+#sobre .pastilla {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -256,14 +249,13 @@
     text-shadow: 0 1px 0 rgba(255, 255, 255, .45);
 }
 
-/* --------- Carta “accent” (método) --------- */
-#sobre .card--accent {
+
+#sobre .metodo {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.04));
     border: 1px solid rgba(255, 214, 140, 0.45);
 }
 
-/* Pasos del método */
-#sobre .steps {
+#sobre .pasos {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -272,21 +264,21 @@
     gap: clamp(10px, 2vw, 18px);
 }
 
-#sobre .step {
+#sobre .paso {
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid var(--card-stroke);
     border-radius: 14px;
     padding: clamp(12px, 2vw, 18px);
 }
 
-#sobre .step__title {
+#sobre .paso__title {
     margin: 0 0 6px;
     font-size: clamp(1rem, .9rem + .6vw, 1.25rem);
     color: var(--accent-2);
     letter-spacing: .02em;
 }
 
-#sobre .step__text {
+#sobre .paso__text {
     margin: 0;
     color: var(--muted);
     line-height: 1.65;
@@ -294,17 +286,16 @@
 }
 
 @media (max-width: 880px) {
-    #sobre .steps {
+    #sobre .pasos {
         grid-template-columns: 1fr;
     }
 }
 
-/* --------- Higiene (cartas estándar) --------- */
+
 #sobre .bloque--higiene .card {
     border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* --------- Equipo (2 encargadas) --------- */
 #sobre .team-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -435,9 +426,6 @@
     animation-delay: .06s;
 }
 
-#sobre .cards-grid .card:nth-child(3) {
-    animation-delay: .12s;
-}
 
 #sobre .team-grid .team-card:nth-child(2) {
     animation-delay: .06s;
@@ -456,13 +444,13 @@
         padding: 16px;
     }
 
-    #sobre .card--hero .card__media {
+    #sobre .card_contenido .card__media {
         aspect-ratio: 16/9;
     }
 }
 
 
-#sobre .card--hero .card__media img {
+#sobre .card_contenido .card__media img {
     width: 100%;
     height: auto;
     display: block;
@@ -470,7 +458,7 @@
 }
 
 /* Reduce el aspect-ratio en pantallas pequeñas y evita overflow */
-#sobre .card--hero .card__media {
+#sobre .card_contenido .card__media {
     aspect-ratio: 21 / 9;
     /* valor por defecto para desktop */
     width: 100%;
@@ -484,15 +472,15 @@
 @media (max-width: 640px) {
 
     /* Hero media con ratio más vertical para móviles */
-    #sobre .card--hero .card__media {
+    #sobre .card_contenido .card__media {
         aspect-ratio: 16 / 9;
         padding: 0;
     }
 
     /* Evita que el título y texto estén demasiado desplazados; los colocamos en flujo */
-    #sobre .card--hero .card__media>.card__title,
-    #sobre .card--hero .card__media>.card__text,
-    #sobre .card--hero .card__media>.pills {
+    #sobre .card_contenido .card__media>.card__title,
+    #sobre .card_contenido .card__media>.card__text,
+    #sobre .card_contenido .card__media>.pastillas {
         position: static;
         left: auto;
         right: auto;
@@ -502,20 +490,20 @@
     }
 
     /* Título más legible y tamaño controlado en móviles */
-    #sobre .card--hero .card__media>.card__title {
+    #sobre .card_contenido .card__media>.card__title {
         font-size: clamp(1.1rem, 3.6vw, 1.45rem);
         color: #fff;
         margin-bottom: 0.5rem;
         line-height: 1.15;
     }
 
-    #sobre .card--hero .card__media>.card__text {
+    #sobre .card_contenido .card__media>.card__text {
         font-size: clamp(.95rem, 2.8vw, 1.05rem);
         color: rgba(238, 244, 247, 0.95);
         margin-bottom: 0.75rem;
     }
 
-    #sobre .card--hero .pills {
+    #sobre .card_contenido .pastillas {
         display: flex;
         gap: 8px;
         flex-wrap: wrap;
@@ -526,14 +514,14 @@
 /* Si en algún punto el título queda encima de la imagen con position absolute en desktop,
    mantenemos la versión desktop pero con límites para que no salga del viewport */
 @media (min-width: 641px) {
-    #sobre .card--hero .card__media>.card__title {
+    #sobre .card_contenido .card__media>.card__title {
         bottom: clamp(56px, 8vw, 120px);
         font-size: clamp(1.3rem, 1rem + 2vw, 2.2rem);
         text-shadow: 0 8px 26px rgba(0, 0, 0, .45);
         margin-bottom: 30px;
     }
 
-    #sobre .card--hero .card__media>.card__text {
+    #sobre .card_contenido .card__media>.card__text {
         bottom: clamp(36px, 6.5vw, 92px);
         max-width: 58ch;
         text-shadow: 0 6px 18px rgba(0, 0, 0, .38);
@@ -541,15 +529,15 @@
 }
 
 /* Asegura que el contenedor del hero no provoque scroll horizontal */
-#sobre .card--hero,
-#sobre .card--hero .card__media {
+#sobre .card_contenido,
+#sobre .card_contenido .card__media {
     max-width: 100%;
     box-sizing: border-box;
 }
 
 /* Si usas transform/scale en .card__img, limita overflow visual en móviles */
 @media (max-width: 480px) {
-    #sobre .card--hero .card__img {
+    #sobre .card_contenido .card__img {
         transform: none;
     }
 }
