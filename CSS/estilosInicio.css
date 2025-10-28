@@ -428,7 +428,7 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .team-grid {
+    .seccion-cards-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -438,7 +438,7 @@ body {
 }
 
 @media (max-width: 640px) {
-    .team-grid {
+    .seccion-cards-grid {
         grid-template-columns: 1fr;
     }
 
@@ -507,7 +507,7 @@ body {
         padding: 0 1rem;
     }
 
-    .team-grid {
+    .seccion-cards-grid {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
@@ -572,3 +572,4 @@ body {
         padding: 0;
     }
 }
+
