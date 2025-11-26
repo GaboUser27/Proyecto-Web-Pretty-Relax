@@ -113,6 +113,10 @@
     height: auto;
 }
 
+.carousel-item img {
+    height: 700px; 
+    object-fit: cover;
+}
 .autoShow {
     opacity: 0;
     transform: translateY(100px);

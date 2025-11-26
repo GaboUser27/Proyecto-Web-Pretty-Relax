@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pretty&Relax | Agendar</title>
+
+    <!-- Bootstrap CSS v5.3.7 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="CSS/footer.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="CSS/header.css" />
+</head>
+
+<body class="contenedor-fondoColor">
+    <!--Encabezado-->
+    <header>
+        <nav class="navbar navbar navbar-expand-lg navbar-custom">
+            <img src="Imagenes/Logo.png" height="90" width="90">
+            <div class="navbar-container">
+                <a href="index.html" class="navbar-logo">Pretty & Relax</a>
+                <button class="navbar-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="navbar-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li>
+                        <a href="https://api.whatsapp.com/send? phone=50661905980&text=¡Hola me gustaría agendar una cita!"
+                            target="_blank">
+                            Agendar Cita
+                        </a>
+                    </li>
+                    <li><a href="Blog.html" class="active">Servicios</a></li>
+                    <li><a href="sobre-nosotros.html">Nosotros</a></li>
+                    <li><a href="preguntasFrecuentes.html">Preguntas Frecuentes</a></li>
+                    <li><a href="acercaDe.html">Acerca De</a></li>
+                </ul>
+            </div>
+        </nav>
+        <br><br><br><br><br><br><br>
+        
+    </header>
+        <!-- Scripts header -->
+    <script src="JS/script.js"></script>
+    <!-- Banner Clima (OpenWeather) -->
+
+    <!-- CONTACTO SECTION START -->
+    <section class="container my-5" id="contacto">
+        <h2 class="text-center mb-4">Contáctanos</h2>
+        <p class="text-center mb-5 fs-5">¡Estamos aquí para ayudarte a brillar!</p>
+
+        <div class="row g-4">
+            <!-- Columna Izquierda: Info -->
+            <div class="col-md-6">
+                <h5><i class="bi bi-geo-alt-fill text-danger"></i> Dirección</h5>
+                <p>7050 lakeview haven Drive, unidad 7066-135 Houston Texas 77095</p>
+
+                <h5><i class="bi bi-clock-fill text-danger"></i> Horario</h5>
+                <ul class="list-unstyled">
+                    <li>Lunes a Viernes: 10:00 p.m. - 5:00 p.m.</li>
+                    <li>Sábados: 11:30 a.m. - 6:00 p.m.</li>
+                    <li>Domingos: Cerrado</li>
+                </ul>
+
+                <div id="distancia" class="mt-3 fw-bold text-primary"></div>
+            </div>
+            <!-- Columna Derecha: Formulario -->
+            <form id="formContacto" class="p-4 bg-light rounded shadow">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                    7050 lakeview haven Drive, unidad 7066-135 Houston Texas 77095
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre Completo</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="mensaje" name="mensaje" rows="3"
+                        placeholder="Escribí tu mensaje o el nombre del servicio..."></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+                    <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento" required>
+                </div>
+
+                <!-- Campo oculto para edad -->
+                <input type="hidden" id="edad" name="edad">
+                <div class="mb-3">
+                    <label for="ingreso" class="form-label">Rango de Ingreso</label>
+                    <input type="range" class="form-range" id="ingreso" name="ingreso" min="0" max="10000000"
+                        step="500000" oninput="document.getElementById('valorIngreso').textContent = ingreso.value">
+                    <div>$<span id="valorIngreso">0</span></div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Género</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="genero" id="generoF" value="Femenino"
+                            required>
+                        <label class="form-check-label" for="generoF">Femenino</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="genero" id="generoM" value="Masculino">
+                        <label class="form-check-label" for="generoM">Masculino</label>
+                    </div>
+                </div>
+
+
+                <p id="mensajeEdad" style="color: red; display: none;"></p>
+                <input type="submit" id="button" value="Enviar Correo" class="btn btn-danger mt-3">
+                <div class="text-center my-4">
+                    <button class="btn btn-danger btn-lg"
+                        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/gaelortega2607'});return false;">
+                        Reservar cita
+                    </button>
+                </div>
+            </form>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+            </script>
+
+            <script type="text/javascript">
+                emailjs.init('agK78pnZXkS8p2veP')
+            </script>
+            <!-- Mapa de Google -->
+            <div class="mt-5">
+                <h4 class="text-center mb-3">Ubicación del salón</h4>
+                <div id="map" style="height: 400px;" class="shadow-sm rounded"></div>
+            </div>
+    </section>
+
+    <!-- CONTACTO SECTION END -->
+
+    <!--Footer-->
+    <footer class="footer">
+        <ul class="social-icon">
+            <li class="icon-elem">
+                <a href="https://www.instagram.com/pretty_and_relax_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    target="_blank" class="icon">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </li>
+            <li class="icon-elem">
+                <a href="https://api.whatsapp.com/send? phone=50661905980&text=¡Hola me gustaría información!"
+                    target="_blank" class="icon">
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                </a>
+            </li>
+            <li class="icon-elem">
+                <a href="https://www.tiktok.com/@marijose6946?is_from_webapp=1&sender_device=pc" target="_blank"
+                    class="icon">
+                    <ion-icon name="logo-tiktok"></ion-icon>
+                </a>
+            </li>
+            <li class="icon-elem">
+                <a href="https://www.facebook.com/share/1FdAsHoLtc/?mibextid=wwXIfr" target="_blank" class="icon">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+            </li>
+        </ul>
+        <ul class="menu">
+            <li class="menu-elem">
+                <a href="index.html" class="menu-icon"> Inicio </a>
+            </li>
+            <li class="menu-elem">
+                <a href="Blog.html" class="menu-icon"> Servicios </a>
+            </li>
+            <li class="menu-elem">
+                <a href="Blog.html#Contactos" class="menu-icon"> Contacto </a>
+            </li>
+            <li class="menu-elem">
+                <a href="" class="menu-icon"> Preguntas Frecuentes </a>
+            </li>
+            <li class="menu-elem">
+                <a href="acercaDe.html" class="menu-icon"> Acerca De </a>
+            </li>
+            <li class="menu-elem">
+                <a href="sobre-nosotros.html" class="menu-icon"> Sobre Nosotros </a>
+            </li>
+        </ul>
+        <p class="text">@2025 | Todos los derechos reservados</p>
+    </footer>
+
+    <!-- Calendly Widget -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+    <script src="assets/js/ApiClima.js"></script>
+    <script src="assets/js/form.js"></script>
+    
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="JS/scroll-progress.js"></script>
+</body>
+
+</html>

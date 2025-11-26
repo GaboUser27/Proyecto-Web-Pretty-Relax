@@ -16,7 +16,7 @@ body {
     /* Permite cortar palabras largas */
     overflow-wrap: break-word;
     /* Alternativa moderna */
-    white-space: norma
+    white-space: normal
 }
 
 button.active,
