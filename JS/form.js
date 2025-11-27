@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("formContacto");
-    const fechaNacimiento = document.getElementById("fechaNacimiento");
+    // const fechaNacimiento = document.getElementById("fechaNacimiento");
     const btn = document.getElementById("button");
 
     // --- Prellenar mensaje si viene ?servicio= en la URL ---
@@ -15,20 +15,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // --- Manejo del envío ---
     form.addEventListener("submit", function (e) {
-        e.preventDefault(); // Evita el refresh
-
-        // Calcular edad (opcional, SOLO si te sirve en el correo)
-        const fecha = new Date(fechaNacimiento.value);
-        const hoy = new Date();
-        let edad = hoy.getFullYear() - fecha.getFullYear();
-        const mes = hoy.getMonth() - fecha.getMonth();
-        if (mes < 0 || (mes === 0 && hoy.getDate() < fecha.getDate())) {
-            edad--;
+        
+        const captcha = grecaptcha.getResponse();
+        if (!captcha) {
+            alert("⚠️ Por favor completá el CAPTCHA.");
+            btn.value = "Enviar";
+            return;
         }
-
-        console.log("Edad calculada:", edad); // Por si ocupás usarla
-
-        // Cambiar texto del botón
+        e.preventDefault(); // Evita el refresh
         btn.value = "Enviando...";
 
         // IDs de EmailJS
@@ -49,3 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     });
 });
+
+function habilitarBoton() {
+    document.getElementById("button").disabled = false;
+}
