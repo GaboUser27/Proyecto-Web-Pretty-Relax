@@ -9,34 +9,37 @@
     <link rel="stylesheet" href="CSS/footer.css" />
     <link rel="stylesheet" href="CSS/header.css" />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
-        rel="stylesheet" 
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
-        crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
+
+<style>
+    /*Celulares*/
+    @media (max-width:480px) {
+        .navbar img {
+            display: none;
+        }
+    }
+</style>
 
 <body>
     <!--Encabezado-->
     <header class="contenedor-imagen">
         <nav class="navbar navbar navbar-expand-lg navbar-custom">
             <img src="Imagenes/Logo.png" height="70" width="70" />
-            <div class="navbar-container ">
+            <div class="navbar-container">
                 <a href="index.html" class="navbar-logo">Pretty & Relax</a>
                 <button class="navbar-toggle">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </button>
-                <ul class="navbar-menu">
+                <ul class="navbar-menu mt-3">
                     <li><a href="index.html" class="active">Inicio</a></li>
-                    <li>
-                        <a href="Contacto.html">
-                            Agendar Cita
-                        </a>
-                    </li>
+                    <li><a href="AgendarCita.html">Agendar Cita</a></li>
                     <li><a href="Blog.html">Servicios</a></li>
                     <li><a href="sobre-nosotros.html">Nosotros</a></li>
                     <li><a href="preguntasFrecuentes.html">Preguntas Frecuentes</a></li>
@@ -145,73 +148,72 @@
             <video class="videoPrettyAndRelax_contenido" src="ImagenesServicios/VideoBeforeAfter.mp4" controls></video>
         </div>
 
-        
+
         <section class="container-fluid my-5 containerServiciosD">
-        <h2 class="text-center mb-4">Nuestros Servicios Destacados</h2>
-        <div class="row g-2" id="contenedor-servicios">
-            <!-- Tarjetas -->
-            
-        </div>
+            <h2 class="text-center mb-4">Nuestros Servicios Destacados</h2>
+            <div class="row g-2" id="contenedor-servicios">
+                <!-- Tarjetas -->
+
+            </div>
         </section>
-         <div id="carouselSalon" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
+        <div id="carouselSalon" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
 
-                    <!-- Slide 1 -->
-                    <div class="carousel-item active">
-                        <img src="ImagenesSliderMasajes/M4.jpg" class="d-block w-100" alt="Cabello">
-                        <div class="carousel-caption text-start bg-dark  p-4 rounded shadow-sm w-50">
-                            <p class="text-uppercase mb-1">Conocé más sobre</p>
-                            <h2 class="fw-bold text-white">Pretty & Relax</h2>
-                            <p class="text-white infoCarousel">Cada detalle de nosotros tiene una historia. Conoce
-                                cómo nació nuestro compromiso con la belleza y el bienestar saludable.</p>
-                            <a href="sobre-nosotros.html" class="btn btn-outline-light custom-btn-white mt-2">Ver Sobre Nosotros</a>
-                        </div>
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <img src="ImagenesSliderMasajes/M4.jpg" class="d-block w-100" alt="Cabello">
+                    <div class="carousel-caption text-start bg-dark  p-4 rounded shadow-sm w-50">
+                        <p class="text-uppercase mb-1">Conocé más sobre</p>
+                        <h2 class="fw-bold text-white">Pretty & Relax</h2>
+                        <p class="text-white infoCarousel">Cada detalle de nosotros tiene una historia. Conoce
+                            cómo nació nuestro compromiso con la belleza y el bienestar saludable.</p>
+                        <a href="sobre-nosotros.html" class="btn btn-outline-light custom-btn-white mt-2">Ver Sobre
+                            Nosotros</a>
                     </div>
-
-                    <!-- Slide 2 -->
-                    <div class="carousel-item" id="carousel2">
-                        <img src="ImagenesServicios/MasajeAceite.gif" class="d-block w-100" alt="Maquillaje">
-                        <div class="carousel-caption text-start bg-dark  p-4 rounded shadow-sm w-50">
-                            <p class="text-uppercase mb-1">Cuidate a ti mismo con nuestros</p>
-                            <h2 class="fw-bold text-white">Servicios</h2>
-                            <p class="text-white infoCarousel">Disfruta de una experiencia completa con nuestros
-                                servicios especializados. Realza tu estilo, transforma tu look con
-                                peluquería de calidad,luce unas manos impecables con manicura experta y demás servicios.
-                            </p>
-                            <a href="Blog.html" class="btn btn-outline-light custom-btn-white mt-2 btn-Servicios">Explorar
-                                servicios</a>
-
-
-                        </div>
-                    </div>
-
-                    <!-- Slide 3 -->
-                    <div class="carousel-item">
-                        <img src="ImagenesSliderMasajes/geriatrico5.jpg" class="d-block w-100" alt="Facial">
-                        <div class="carousel-caption text-start bg-dark  p-4 rounded shadow-sm w-50">
-                            <p class="text-uppercase mb-1">Calidad que se nota</p>
-                            <h2 class="fw-bold text-white">AGENDAR AHORA</h2>
-                            <p class="text-white infoCarousel">Reserva tu momento de bienestar hoy mismo. <br>
-                                Agenda tu cita y disfruta de una experiencia única diseñada para ti. <br>
-                                ¡Haz clic y asegura tu espacio ahora!.</p>
-                            <a href="AgendarCita.html" class="btn btn-outline-light custom-btn-white mt-2">AGENDAR</a>
-                        </div>
-                    </div>
-
                 </div>
 
-                <!-- Controles -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselSalon"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Anterior</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselSalon"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Siguiente</span>
-                </button>
+                <!-- Slide 2 -->
+                <div class="carousel-item" id="carousel2">
+                    <img src="ImagenesServicios/MasajeAceite.gif" class="d-block w-100" alt="Maquillaje">
+                    <div class="carousel-caption text-start bg-dark  p-4 rounded shadow-sm w-50">
+                        <p class="text-uppercase mb-1">Cuidate a ti mismo con nuestros</p>
+                        <h2 class="fw-bold text-white">Servicios</h2>
+                        <p class="text-white infoCarousel">Disfruta de una experiencia completa con nuestros
+                            servicios especializados. Realza tu estilo, transforma tu look con
+                            peluquería de calidad,luce unas manos impecables con manicura experta y demás servicios.
+                        </p>
+                        <a href="Blog.html" class="btn btn-outline-light custom-btn-white mt-2 btn-Servicios">Explorar
+                            servicios</a>
+
+
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <img src="ImagenesSliderMasajes/geriatrico5.jpg" class="d-block w-100" alt="Facial">
+                    <div class="carousel-caption text-start bg-dark  p-4 rounded shadow-sm w-50">
+                        <p class="text-uppercase mb-1">Calidad que se nota</p>
+                        <h2 class="fw-bold text-white">AGENDAR AHORA</h2>
+                        <p class="text-white infoCarousel">Reserva tu momento de bienestar hoy mismo. <br>
+                            Agenda tu cita y disfruta de una experiencia única diseñada para ti. <br>
+                            ¡Haz clic y asegura tu espacio ahora!.</p>
+                        <a href="AgendarCita.html" class="btn btn-outline-light custom-btn-white mt-2">AGENDAR</a>
+                    </div>
+                </div>
+
             </div>
+
+            <!-- Controles -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselSalon" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselSalon" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
     </main>
 
     <!--Footer-->
@@ -266,7 +268,9 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="JS/scroll-progress.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
     <script src="JSON/ServiciosIndex.js"></script>
     <script src="JS/scriptIndex.js"></script>
 
