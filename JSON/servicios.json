@@ -1,0 +1,6 @@
+[
+    { "nombre": "Masajes", "precio": 50},
+    { "nombre": "Cabello", "precio": 30},
+    { "nombre": "Manicura y Pedicura", "precio": 40},
+    { "nombre": "Tratamiento Facial", "precio": 60}
+]
