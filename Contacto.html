@@ -122,12 +122,13 @@
                         placeholder="Escribí tu mensaje o el nombre del servicio..."></textarea>
                 </div>
 
-
                 <div class="mb-3">
                     <label for="grado" class="form-label">Servicio a agendar</label>
                     <select class="form-select" id="grado" name="grado" multiple required></select>
                     <small class="text-muted">Presioná Ctrl (o Cmd en Mac) para seleccionar varios</small>
                 </div>
+
+                <div id="total" style="color: #89f339;" class="fw-bold mt-4 text-end">Total: $0 USD</div>
 
                 <div class="mb-3">
                     <label class="form-label">Género</label><br>
@@ -154,7 +155,7 @@
                     </button> -->
                 </div>
             </form>
-            <script src="JS/scriptCJ.js"></script>
+            <script src="JS/scriptJContacto.js"></script>
             <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
             </script>
             <!-- Aquí se define la llave publica para que me envie el correo con los datos llenos del usuario -->
