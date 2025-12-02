@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("formContacto");
     // const fechaNacimiento = document.getElementById("fechaNacimiento");
     const btn = document.getElementById("button");
+    document.getElementById("fecha").value = new Date().toLocaleString();
 
     // --- Prellenar mensaje si viene ?servicio= en la URL ---
     const params = new URLSearchParams(window.location.search);
