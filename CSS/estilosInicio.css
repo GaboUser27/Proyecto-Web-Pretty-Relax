@@ -114,9 +114,10 @@
 }
 
 .carousel-item img {
-    height: 700px; 
+    height: 700px;
     object-fit: cover;
 }
+
 .autoShow {
     opacity: 0;
     transform: translateY(100px);
@@ -199,6 +200,51 @@ select {
 body {
     top: 0 !important;
 }
+
+.btn-flotante {
+    position: fixed;
+    right: 20px;
+    z-index: 999;
+    font-size: 1.8rem;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: opacity 0.4s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.btn-flotante.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.btn-flotante:hover {
+    transform: scale(1.1);
+}
+
+.btn-flotante a img {
+    width: 45px;
+    height: 45px;
+}
+
+#btnWhatsApp {
+    bottom: 90px;
+    background-color: #25D366;
+    color: white;
+}
+
+#btnTop {
+    bottom: 20px;
+    background-color: #dc3545;
+    color: white;
+}
+
 
 
 @media (max-width: 880px) {
@@ -337,6 +383,7 @@ body {
     .videoPrettyAndRelax_contenido {
         max-width: 150px;
     }
+
     .videoPrettyAndRelax {
         width: 100%;
         margin-bottom: 1.5rem;
@@ -626,7 +673,20 @@ body {
     .contenedortexto .text {
         font-size: 0.95rem;
         padding: 0;
-       
     }
-}
 
+    .btn-flotante {
+        width: 45px;
+        height: 45px;
+        font-size: 1.5rem;
+    }
+
+    #btnWhatsApp {
+        bottom: 80px;
+    }
+
+    #btnTop {
+        bottom: 15px;
+    }
+
+}

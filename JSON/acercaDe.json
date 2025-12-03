@@ -1,0 +1,21 @@
+{
+    "equipo": [
+        {
+            "nombre": "Gabriel Andrés Rojas Salas",
+            "cedula": "208830020",
+            "rol": "Soporte Técnico",
+            "carrera": "Estudiante Ingeniería del Software",
+            "universidad": "UTN",
+            "imagen": "Imagenes/Gabriel Rojas.jpg"
+        },
+        {
+            "nombre": "Franklin Abraham Matus Montoya",
+            "cedula": "208650108",
+            "rol": "Soporte Técnico",
+            "carrera": "Estudiante Ingeniería del Software",
+            "universidad": "UTN",
+            "imagen": "Imagenes/Abraham Matus.jpg"
+        }
+    ],
+    "descripcion": "Somos el Equipo de Desarrollo y Soporte Técnico responsable de la creación, implementación y mantenimiento de este proyecto. Nuestro compromiso es garantizar que cada funcionalidad esté correctamente desarrollada y que el sistema opere de manera eficiente para brindar la mejor experiencia a los usuarios. Este proyecto ha sido diseñado y programado desde cero por estudiantes de Ingeniería del Software en la Universidad Técnica Nacional (UTN), quienes además asumimos el rol de soporte técnico para asegurar su correcto funcionamiento y evolución."
+}

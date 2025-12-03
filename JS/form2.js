@@ -38,23 +38,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function obtenerDatosFormulario() {
-        const fecha = document.getElementById("fecha").value;
         const email = document.getElementById("email").value;
         const asunto = document.getElementById("asunto").value;
         const mensaje = document.getElementById("mensaje").value;
-        const servicios = Array.from(document.getElementById("grado").selectedOptions).map(opt => opt.text).join(", ");
         const genero = document.querySelector('input[name="genero"]:checked')?.value || "";
-        const totalTexto = document.getElementById("total").textContent;
-        const totalValor = totalTexto.split(":")[1].trim();
 
         return `
             <hr>
             <h6>Resumen de datos:</h6>
             <div class="row">
-                <div class="col-md-6 mb-2">
-                    <label class="form-label"><strong>Fecha:</strong></label>
-                    <input type="text" class="form-control" value="${fecha}" readonly>
-                </div>
                 <div class="col-md-6 mb-2">
                     <label class="form-label"><strong>Email:</strong></label>
                     <input type="text" class="form-control" value="${email}" readonly>
@@ -71,14 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="mb-2">
                 <label class="form-label"><strong>Mensaje:</strong></label>
                 <textarea class="form-control" style="text-align: justify;" rows="4" readonly>${mensaje}</textarea>
-            </div>
-            <div class="mb-2">
-                <label class="form-label"><strong>Servicios:</strong></label>
-                <input type="text" class="form-control" value="${servicios}" readonly>
-            </div>
-            <div class="mb-2">
-                <label class="form-label"><strong>Total:</strong></label>
-                <input type="text" class="form-control fw-bold" style="color:#28a745;" value="${totalValor}" readonly>
             </div>
         `;
     }

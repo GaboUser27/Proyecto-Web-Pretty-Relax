@@ -9,9 +9,8 @@
     <!-- Bootstrap CSS v5.3.7 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <link rel="stylesheet" href="CSS/footer.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="CSS/header.css" />
@@ -146,12 +145,31 @@
                         <label class="form-check-label" for="generoM">Masculino</label>
                     </div>
                 </div>
+
                 <div class="g-recaptcha" data-sitekey="6LfqXxosAAAAAOeZEQsDtdW22euXfrgyMlt5gZUc"
-     data-callback="habilitarBoton"></div>
-<br>
+                    data-callback="habilitarBoton"></div>
+                <br>
 
                 <input type="submit" id="button" value="Agendar al Correo" class="btn btn-danger mt-3" disabled>
                 <div class="text-center my-4">
+                </div>
+
+                <div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="miModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="miModalLabel">Estado del envío</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Cerrar"></button>
+                            </div>
+                            <div class="modal-body" id="modalMensaje">
+                                <!-- Aquí se insertará el mensaje y los datos -->
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </form>
             <script src="JS/scriptCJ.js"></script>
